@@ -1,0 +1,55 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "FoxGale.tmx",
+    "expandedProjectPaths": [
+    ],
+    "file.lastUsedOpenFilter": "All Files (*)",
+    "fileStates": {
+        "Background.tsx": {
+            "scaleInDock": 5.5,
+            "scaleInEditor": 1
+        },
+        "CollisionTileSet.tsx": {
+            "scaleInDock": 5.5,
+            "scaleInEditor": 1
+        },
+        "FoxGale.tmx": {
+            "scale": 0.75,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 523.3333333333333,
+                "y": 221.33333333333331
+            }
+        },
+        "FoxGale.tmx#Background": {
+            "scaleInDock": 3
+        }
+    },
+    "last.exportedFilePath": "/Users/remilegrand/Desktop/VScode folder/Web Dev/Portefolio/Images/FoxGame",
+    "last.imagePath": "/Users/remilegrand/Desktop",
+    "map.height": 30,
+    "map.lastUsedExportFilter": "JavaScript map files (*.js)",
+    "map.lastUsedFormat": "tmx",
+    "map.tileHeight": 16,
+    "map.tileWidth": 16,
+    "map.width": 64,
+    "openFiles": [
+        "FoxGale.tmx",
+        "Background.tsx",
+        "CollisionTileSet.tsx"
+    ],
+    "project": "FoxGame.tiled-project",
+    "recentFiles": [
+        "CollisionTileSet.tsx",
+        "Background.tsx",
+        "FoxGale.tmx"
+    ],
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.tileSize": {
+        "height": 16,
+        "width": 16
+    }
+}

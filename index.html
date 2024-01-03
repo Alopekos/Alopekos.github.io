@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rémi Legrand</title>
+    <link rel="stylesheet" href="/Styles/stylesheet.css" />
+    <link rel="icon" type="image" href="Images/Favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200;300;400;500;600;700;800;900&family=Montserrat:wght@100;200;400;600;700&family=Pixelify+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div id="header">
+      <div class="container">
+        <nav class="navbar">
+          <div class="logo-container">
+            <img class="logo" src="Images/Favicon.png" />
+            <img
+              class="iconArrow"
+              role="button"
+              src="Images/CloseIconNav.png"
+              onclick="navCloseInstant()"
+            />
+          </div>
+          <ul id="menu">
+            <li onclick="navClose()" class="list">
+              <a href="#header">
+                <span class="icon">
+                  <ion-icon class="navIcon" name="home-outline"></ion-icon>
+                </span>
+                <span class="text">Home</span>
+              </a>
+            </li>
+            <li onclick="navClose()" class="list">
+              <a href="#about">
+                <span class="icon">
+                  <ion-icon
+                    class="navIcon"
+                    name="person-circle-outline"
+                  ></ion-icon>
+                </span>
+                <span class="text">Profile</span>
+              </a>
+            </li>
+            <li onclick="navClose()" class="list">
+              <a href="#services">
+                <span class="icon">
+                  <ion-icon
+                    class="navIcon"
+                    name="code-slash-outline"
+                  ></ion-icon>
+                </span>
+                <span class="text">Services</span>
+              </a>
+            </li>
+            <li onclick="navClose()" class="list">
+              <a href="#portfolio">
+                <span class="icon">
+                  <ion-icon class="navIcon" name="images-outline"></ion-icon>
+                </span>
+                <span class="text">Portfolio</span>
+              </a>
+            </li>
+            <li onclick="navClose()" class="list">
+              <a href="#contact">
+                <span class="icon">
+                  <ion-icon
+                    class="navIcon"
+                    name="chatbubble-outline"
+                  ></ion-icon>
+                </span>
+                <span class="text">Contact</span>
+              </a>
+            </li>
+            <div class="indicator"></div>
+          </ul>
+          <div class="resume">
+            <button class="resumeBtn">
+              <span
+                ><ion-icon class="icon" name="document-outline"></ion-icon
+              ></span>
+              <span class="text">Resume</span>
+            </button>
+          </div>
+          <div class="openmenu">
+            <img
+              class="menuicon"
+              role="button"
+              src="Images/MenuIcon.png"
+              onclick="openmenu()"
+            />
+          </div>
+        </nav>
+
+        <ul id="sidemenu">
+          <li class="sidelist">
+            <a href="#header" onclick="closemenu()">
+              <span class="icon">
+                <ion-icon class="navIcon" name="home-outline"></ion-icon>
+              </span>
+              Home</a
+            >
+          </li>
+          <li class="sidelist">
+            <a href="#about" onclick="closemenu()">
+              <span class="icon">
+                <ion-icon
+                  class="navIcon"
+                  name="person-circle-outline"
+                ></ion-icon>
+              </span>
+              Profile</a
+            >
+          </li>
+          <li class="sidelist">
+            <a href="#services" onclick="closemenu()">
+              <span class="icon">
+                <ion-icon class="navIcon" name="code-slash-outline"></ion-icon>
+              </span>
+              Services</a
+            >
+          </li>
+          <li class="sidelist">
+            <a href="#portfolio" onclick="closemenu()">
+              <span class="icon">
+                <ion-icon class="navIcon" name="images-outline"></ion-icon>
+              </span>
+              Portfolio</a
+            >
+          </li>
+          <li class="sidelist">
+            <a href="#contact" onclick="closemenu()">
+              <span class="icon">
+                <ion-icon class="navIcon" name="chatbubble-outline"></ion-icon>
+              </span>
+              Contact</a
+            >
+          </li>
+          <li class="sidelistResume">
+            <a href="#" onclick="closemenu()">Resume</a>
+          </li>
+          <img
+            class="closeicon"
+            role="button"
+            src="Images/CloseIcon.png"
+            onclick="closemenu()"
+          />
+        </ul>
+      </div>
+      <div class="bar">
+        <ul>
+          <li>
+            <ion-icon class="socialIcon" name="logo-linkedin"></ion-icon>
+          </li>
+          <li>
+            <ion-icon class="socialIcon" name="logo-twitter"></ion-icon>
+          </li>
+          <li>
+            <ion-icon class="socialIcon" name="logo-instagram"></ion-icon>
+          </li>
+          <li>
+            <ion-icon class="socialIcon" name="logo-github"></ion-icon>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- ------ Presentation/minigame ------ -->
+
+    <div class="foregroundImg">
+      <img src="/Images/Foreground.png" />
+    </div>
+    <div class="container-game">
+      <div class="game">
+        <canvas id="canvas"></canvas>
+      </div>
+    </div>
+    <div class="presentation">
+      <div class="searchBar">
+        <p>- Hi, I'm -</p>
+      </div>
+      <div class="animated-text">
+        <span></span>
+      </div>
+    </div>
+    <div class="sleepyFox">
+      <img src="Images/SleepyFox.gif" alt="fox-gif" width="200" height="200" />
+    </div>
+    <!-- ------------ about ------------ -->
+
+    <div id="about">
+      <div class="container">
+        <div class="row">
+          <div class="about-col-1">
+            <img src="Images/Profile-PicturePxl.png" />
+            <img src="Images/Profile-Picture.jpg" />
+          </div>
+          <div class="about-col-2">
+            <h1 class="sub-title">About me</h1>
+            <p>
+              Hi ! My name is Rémi Legrand. <br />
+              I am an aspiring front-end web developer and UX/UI designer. As a
+              programmer, my passion lies in crafting distinctive and responsive
+              user interfaces.
+            </p>
+            <p>
+              Passionate about pixel art and programming, I am always curious to
+              learn more about new technologies and creative coding.
+            </p>
+            <p>Let's get in touch !</p>
+
+            <div class="tab-titles">
+              <h1 class="tab-links active-link" onclick="openTab('skills')">
+                Skills
+              </h1>
+              <h1 class="tab-links" onclick="openTab('experience')">
+                Experience
+              </h1>
+              <h1 class="tab-links" onclick="openTab('education')">
+                Education
+              </h1>
+            </div>
+            <div class="tab-contents active-tab" id="skills">
+              <ul>
+                <li><span>UI/UX</span><br />Designing Web App interfaces</li>
+                <li>
+                  <span>Web developpement</span><br />Web app developpement
+                </li>
+                <li>
+                  <span>Software and Technichal</span><br />HTML, CSS,
+                  JavaScript, Photoshop, Git, GitHub, Visual Studio
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="experience">
+              <ul>
+                <li><span>2023 - Current</span><br />Self-taught programmer</li>
+                <li>
+                  <span>2022 - 2023</span><br />English tutor at "Abaque",
+                  Grenoble
+                </li>
+                <li>
+                  <span>2014</span><br />Observation internship in web
+                  design/web development at "La Haute Société", Grenoble.
+                </li>
+              </ul>
+            </div>
+            <div class="tab-contents" id="education">
+              <ul>
+                <li>
+                  <span>2022</span><br />Master's degree in English Literature
+                  (LLCER) at Université Grenoble Alpes.
+                </li>
+                <li>
+                  <span>2020</span><br />Bachelor's degree in Applied Foreign
+                  Languages (LEA) at Université Grenoble Alpes.
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------ services ------------ -->
+
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Web Dev</h2>
+            <p>This section is not yet available.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <h2>UI/uX Design</h2>
+            <p>This section is not yet available.</p>
+            <a href="#">Learn more</a>
+          </div>
+          <div>
+            <h2>Pixel Art</h2>
+            <p>This section is not yet available.</p>
+            <a href="#">Learn more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ------------ portfolio ------------ -->
+
+    <div id="portfolio">
+      <div class="container">
+        <h1 class="sub-title">My Work</h1>
+        <div class="work-list">
+          <div class="work">
+            <img src="Images/NoImage.jpg" />
+            <div class="layer">
+              <h3>Project</h3>
+              <p>No project available yet.</p>
+              <a href=""
+                ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Images/NoImage.jpg" />
+            <div class="layer">
+              <h3>Project</h3>
+              <p>No project available yet.</p>
+              <a href=""
+                ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
+              ></a>
+            </div>
+          </div>
+          <div class="work">
+            <img src="Images/NoImage.jpg" />
+            <div class="layer">
+              <h3>Project</h3>
+              <p>No project available yet.</p>
+              <a href=""
+                ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
+              ></a>
+            </div>
+          </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+      </div>
+    </div>
+
+    <!-- ------------ contact ------------ -->
+
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1 class="sub-title">Contact me</h1>
+            <p></p>
+            <p>
+              remi_legrand@icloud.com<a
+                href="mailto:remi_legrand@icloud.com"
+                target="_blank"
+                ><ion-icon class="emailIcon" name="mail"></ion-icon
+              ></a>
+            </p>
+          </div>
+          <div class="contact-right">
+            <form name="submit-to-google-sheet">
+              <input type="text" name="Name" placeholder="Your name" required />
+              <textarea
+                class="message-input"
+                name="Message"
+                rows="10"
+                placeholder="Your message."
+              ></textarea>
+              <button type="submit" class="btn btn2">
+                <ion-icon class="sendIcon" name="send"></ion-icon>
+              </button>
+            </form>
+            <span id="msg"></span>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+        <p>Copyright &copy; Rémi Legrand 2024.</p>
+      </div>
+    </div>
+
+    <script src="Scripts/index.js"></script>
+    <script src="Scripts/Classes/Sprite.js"></script>
+    <script src="Scripts/Classes/Player.js"></script>
+    <script src="Scripts/utils.js"></script>
+    <script src="Scripts/data/collisions.js"></script>
+    <script src="Scripts/Classes/CollisionBlock.js"></script>
+    <script src="Scripts/game.js"></script>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
