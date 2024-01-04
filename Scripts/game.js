@@ -1,15 +1,3 @@
-window.addEventListener(
-  "keydown",
-  function (e) {
-    if (
-      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(e.code) > -1
-    ) {
-      e.preventDefault();
-    }
-  },
-  false
-);
-
 const canvas = document.getElementById("canvas");
 const c = canvas.getContext("2d");
 canvas.width = 1024;
@@ -124,13 +112,16 @@ const player = new Player({
 });
 
 const keys = {
-  ArrowRight: {
+  KeyD: {
     pressed: false,
   },
-  ArrowLeft: {
+  KeyA: {
     pressed: false,
   },
-  ArrowDown: {
+  KeyS: {
+    pressed: false,
+  },
+  KeyW: {
     pressed: false,
   },
 };
@@ -151,15 +142,15 @@ function animate() {
 
   player.velocity.x = 0;
 
-  if (keys.ArrowRight.pressed) {
+  if (keys.KeyD.pressed) {
     player.switchSprite("Run");
     player.velocity.x = 4;
     player.lastDirection = "right";
-  } else if (keys.ArrowLeft.pressed) {
+  } else if (keys.KeyA.pressed) {
     player.switchSprite("RunLeft");
     player.velocity.x = -4;
     player.lastDirection = "left";
-  } else if (keys.ArrowDown.pressed) {
+  } else if (keys.KeyS.pressed) {
     if (player.lastDirection === "right") {
       player.switchSprite("Sit");
     } else player.switchSprite("SitLeft");
@@ -181,33 +172,34 @@ function animate() {
 }
 
 window.addEventListener("keydown", (event) => {
-  switch (event.key) {
-    case "ArrowRight":
-      keys.ArrowRight.pressed = true;
-      keys.ArrowDown.pressed = false;
+  switch (event.code) {
+    case "KeyD":
+      keys.KeyD.pressed = true;
+      keys.KeyS.pressed = false;
       break;
-    case "ArrowLeft":
-      keys.ArrowLeft.pressed = true;
-      keys.ArrowDown.pressed = false;
+    case "KeyA":
+      keys.KeyA.pressed = true;
+      keys.KeyS.pressed = false;
       break;
-    case "ArrowUp":
+    case "KeyW":
       if (player.velocity.y === 0) {
         player.velocity.y = -7.3;
-        keys.ArrowDown.pressed = false;
+        keys.KeyW.pressed = true;
+        keys.KeyS.pressed = false;
       }
       break;
-    case "ArrowDown":
-      keys.ArrowDown.pressed = true;
+    case "KeyS":
+      keys.KeyS.pressed = true;
   }
 });
 
 window.addEventListener("keyup", (event) => {
-  switch (event.key) {
-    case "ArrowRight":
-      keys.ArrowRight.pressed = false;
+  switch (event.code) {
+    case "KeyD":
+      keys.KeyD.pressed = false;
       break;
-    case "ArrowLeft":
-      keys.ArrowLeft.pressed = false;
+    case "KeyA":
+      keys.KeyA.pressed = false;
       break;
   }
 });
