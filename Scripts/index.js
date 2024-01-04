@@ -1,7 +1,7 @@
 //onload navBar
 setTimeout(() => {
   navBar.style.transform = "translateX(0)";
-}, 2000).onload;
+}, 1000).onload;
 
 //Close NavBar
 function navClose() {
@@ -18,6 +18,7 @@ function navCloseInstant() {
 let gameHasStarted = false;
 const sleepyFox = document.querySelector(".sleepyFox");
 const presentation = document.querySelector(".presentation");
+const wasd = document.querySelector(".wasdAnim");
 
 window.addEventListener(
   "keyup",
@@ -29,6 +30,7 @@ window.addEventListener(
       animate();
       navBar.style.transform = "translateX(-120%)";
       sleepyFox.style.display = "none";
+      wasd.style.display = "none";
       presentation.style.transform = "translateY(-320px)";
       gameHasStarted = true;
       return gameHasStarted;
