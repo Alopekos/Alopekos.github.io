@@ -24,9 +24,7 @@ window.addEventListener(
   (gameEvent) => {
     if (
       gameHasStarted == false &&
-      ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight"].indexOf(
-        gameEvent.code
-      ) > -1
+      ["KeyW", "KeyA", "KeyS", "KeyD"].indexOf(gameEvent.code) > -1
     ) {
       animate();
       navBar.style.transform = "translateX(-120%)";

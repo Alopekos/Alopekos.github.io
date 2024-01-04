@@ -23,9 +23,9 @@ html {
 }
 
 body {
-  padding-top: 50px;
   background-image: url("/Images/BackgroundPixelArt.png");
   background-color: #131f2f;
+  background-size: 225vh;
   background-repeat: no-repeat;
 }
 
@@ -382,14 +382,15 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ----------- Presentation/minigame ------------ */
 .foregroundImg img {
   position: absolute;
-  top: 0px;
+  width: 225vh;
+  top: 0vh;
 }
 
 .presentation {
   position: relative;
-  top: -160px;
   width: 100vw;
-  margin-bottom: 100vh;
+  top: -1vw;
+  margin-bottom: 120vh;
   align-items: center;
   justify-content: center;
   transform: translateY(0px);
@@ -501,32 +502,27 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .sleepyFox {
   position: absolute;
-  left: 155px;
-  top: 410px;
-  width: 100%;
+  left: 23vh;
+  top: 61.5vh;
 }
 
 .sleepyFox img {
-  width: 64px;
-  height: 64px;
+  width: 10vh;
+  height: 10vh;
 }
 
 .container-game {
-  padding: 20px 100px;
-  margin-top: 50px;
-}
-
-.game {
+  margin: 0;
   padding: 0;
-  width: 0;
-  height: 0;
-  margin-bottom: auto;
-  margin-left: 50px;
 }
 
 #canvas {
-  margin-top: 10px;
-  margin-left: -15px;
+  position: absolute;
+  left: 22vh;
+  top: 26.5vh;
+  width: 152vh;
+  height: 71vh;
+  z-index: -1;
 }
 
 /* ------------- about -------------- */
@@ -910,11 +906,19 @@ nav .menuicon {
     transition: 0.5s;
   }
   .navbar {
-    height: 70%;
-    top: 15%;
+    height: 60vh;
+    width: 30vw;
+    min-width: 17vh;
+    left: -11vw;
+    top: 30vh;
     padding-top: 50px;
     padding-bottom: 50px;
     transition: 1s;
+  }
+
+  .cross-container img {
+    height: 10vh;
+    width: 10vh;
   }
 
   .openmenu {
@@ -922,19 +926,19 @@ nav .menuicon {
     display: flex;
     background-image: url(/Images/NavLiBackground.png);
     background-size: contain;
-    box-shadow: inset 0px 0px 0px 4px #9a672b;
+    box-shadow: inset 0px 0px 0px 0.5vh #9a672b;
     border-radius: 50%;
-    height: 60px;
-    width: 60px;
+    height: 10vh;
+    width: 10vh;
     justify-content: center;
     align-items: center;
-    border: 3px solid #613514;
+    border: 0.5vh solid #613514;
   }
 
   nav .menuicon {
     display: inline-block;
-    height: 30px;
-    width: 30px;
+    height: 6vh;
+    width: 6vh;
     cursor: pointer;
   }
 
