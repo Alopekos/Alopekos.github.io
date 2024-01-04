@@ -31,7 +31,7 @@ window.addEventListener(
       animate();
       navBar.style.transform = "translateX(-120%)";
       sleepyFox.style.display = "none";
-      presentation.style.transform = "translateY(-120px)";
+      presentation.style.transform = "translateY(-320px)";
       gameHasStarted = true;
       return gameHasStarted;
     }
