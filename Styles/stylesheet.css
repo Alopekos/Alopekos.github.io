@@ -25,7 +25,7 @@ html {
 body {
   background-image: url("/Images/BackgroundPixelArt.png");
   background-color: #131f2f;
-  background-size: 225vh;
+  background-size: 104vw;
   background-repeat: no-repeat;
 }
 
@@ -374,7 +374,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ----------- Presentation/minigame ------------ */
 .foregroundImg img {
   position: absolute;
-  width: 225vh;
+  width: 104vw;
   top: 0vh;
 }
 
@@ -494,24 +494,24 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .sleepyFox {
   position: absolute;
-  left: 23vh;
-  top: 61.5vh;
+  left: 10.5vw;
+  top: 28.5vw;
 }
 
 .sleepyFox img {
-  width: 10vh;
-  height: 10vh;
+  width: 4.5vw;
+  height: 4.5w;
 }
 
 .wasdAnim {
   position: absolute;
-  left: 43vh;
-  top: 64vh;
+  left: 20vw;
+  top: 30vw;
 }
 
 .wasdAnim img {
-  width: 9vh;
-  height: 6vh;
+  width: 5vw;
+  height: 3vw;
 }
 
 .container-game {
@@ -521,10 +521,10 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 #canvas {
   position: absolute;
-  left: 22vh;
-  top: 26.5vh;
-  width: 152vh;
-  height: 71vh;
+  left: 10.5vw;
+  top: 12.1vw;
+  width: 70vw;
+  height: 32.9vw;
   z-index: -1;
 }
 
