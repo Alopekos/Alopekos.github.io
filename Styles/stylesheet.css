@@ -43,20 +43,20 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 1%;
-  padding-left: 6vh;
-  width: 24vh;
+  padding-left: 6dvh;
+  width: 24dvh;
   height: 102%;
   background-image: url(/Images/NavBackground.png);
   background-repeat: repeat;
-  background-size: 30vh;
+  background-size: 30dvh;
   position: fixed;
-  left: -4vh;
+  left: -4dvh;
   top: -1%;
   bottom: -1%;
   transform: translateX(-120%);
-  border-radius: 5vh;
+  border-radius: 5dvh;
   z-index: 5;
-  border: 1vh solid #241407;
+  border: 1dvh solid #241407;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.8s ease;
   transition: 1s;
@@ -77,25 +77,25 @@ body {
 
 .cross-container img {
   position: relative;
-  width: 6vh;
-  height: 6vh;
+  width: 6d;
+  height: 6dvh;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 4px #9a672b;
   border-radius: 50%;
-  border: 0.5vh solid #613514;
+  border: 0.5dvh solid #613514;
   transition: 0.5s;
 }
 
 nav ul {
   display: grid;
   justify-content: center;
-  width: 14vh;
-  height: 60vh;
-  padding-top: 1vh;
-  padding-bottom: 1vh;
-  border: #613514 solid 0.5vh;
-  border-radius: 5vh;
+  width: 14dvh;
+  height: 60dvh;
+  padding-top: 1dvh;
+  padding-bottom: 1dvh;
+  border: #613514 solid 0.5dvh;
+  border-radius: 5dvh;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 8px #9a672b;
@@ -117,21 +117,21 @@ nav ul li a {
 
 .navIcon {
   color: #fff;
-  font-size: 5vh;
-  height: 5vh;
+  font-size: 5dvh;
+  height: 5dvh;
 }
 
 nav ul li a .icon {
   position: relative;
   display: block;
-  font-size: 5vh;
-  height: 5vh;
+  font-size: 5dvh;
+  height: 5dvh;
   text-align: center;
   transition: 0.5s;
 }
 
 nav ul li.active a .navIcon {
-  transform: translateY(-1vh);
+  transform: translateY(-1dvh);
   transition: 0.5s;
   color: #1b0d08;
 }
@@ -139,7 +139,7 @@ nav ul li.active a .navIcon {
 nav ul li a .text {
   position: absolute;
   color: #fff;
-  font-size: 2.5vh;
+  font-size: 2.5dvh;
   font-weight: 300;
   letter-spacing: -0.05em;
   transition: 0.7s;
@@ -149,41 +149,41 @@ nav ul li a .text {
 
 nav ul li.active a .text {
   opacity: 1;
-  transform: translateY(3.5vh);
+  transform: translateY(3.5dvh);
   color: #fff;
 }
 
 .indicator {
   display: none;
   position: absolute;
-  margin-top: 1vh;
-  margin-left: 1.3vh;
-  width: 11vh;
-  height: 7vh;
+  margin-top: 1dvh;
+  margin-left: 1.3dvh;
+  width: 11dvh;
+  height: 7dvh;
   background: #ddca7d;
-  border-radius: 3vh;
+  border-radius: 3dvh;
   border: 3px solid #ab7536;
   transition: 0.5s;
 }
 
 nav ul li:nth-child(1).active ~ .indicator {
-  transform: translateY(calc(10vh * 0));
+  transform: translateY(calc(10dvh * 0));
 }
 
 nav ul li:nth-child(2).active ~ .indicator {
-  transform: translateY(calc(11.5vh * 1));
+  transform: translateY(calc(11.5dvh * 1));
 }
 
 nav ul li:nth-child(3).active ~ .indicator {
-  transform: translateY(calc(11.5vh * 2));
+  transform: translateY(calc(11.5dvh * 2));
 }
 
 nav ul li:nth-child(4).active ~ .indicator {
-  transform: translateY(calc(11.5vh * 3));
+  transform: translateY(calc(11.5dvh * 3));
 }
 
 nav ul li:nth-child(5).active ~ .indicator {
-  transform: translateY(calc(11.5vh * 4));
+  transform: translateY(calc(11.5dvh * 4));
 }
 
 .resume {
@@ -197,10 +197,10 @@ nav ul li:nth-child(5).active ~ .indicator {
   align-items: center;
   justify-content: center;
   color: #fff;
-  width: 7vh;
-  height: 7vh;
+  width: 7dvh;
+  height: 7dvh;
   border-radius: 50%;
-  border: 0.5vh solid #613514;
+  border: 0.5dvh solid #613514;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
@@ -210,7 +210,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .resume button .text {
   position: absolute;
   color: #ffffff;
-  font-size: 2vh;
+  font-size: 2dvh;
   letter-spacing: 0.05em;
   opacity: 0;
   transition: 0.5s;
@@ -223,7 +223,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .resume .icon {
-  font-size: 4vh;
+  font-size: 4dvh;
   font-weight: bold;
 }
 
@@ -245,7 +245,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   top: 0;
   right: -300px;
   width: 300px;
-  height: 100vh;
+  height: 100dvh;
   padding-top: 50px;
   font-size: 25px;
   justify-content: center;
@@ -303,8 +303,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 .socialIcon {
   display: flex;
   text-align: center;
-  width: 4vh;
-  height: 4vh;
+  width: 4dvh;
+  height: 4dvh;
   margin-left: auto;
   margin-right: auto;
   transition: 0.5s;
@@ -313,7 +313,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .bar {
   position: fixed;
   display: space-between;
-  width: 10vh;
+  width: 10dvh;
   top: 0px;
   right: 0px;
   display: block;
@@ -322,7 +322,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .bar li {
-  height: 8vh;
+  height: 8dvh;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -337,7 +337,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   content: "";
   display: block;
   width: 2px;
-  height: 30vh;
+  height: 30dvh;
   margin: 0 auto;
   background-color: #fff;
   margin-bottom: 20px;
@@ -347,14 +347,14 @@ nav ul li:nth-child(5).active ~ .indicator {
   content: "";
   display: block;
   width: 2px;
-  height: 40vh;
+  height: 40dvh;
   margin: 0 auto;
   background-color: #fff;
 }
 
 .socialIcon:hover {
   color: #c3a05f;
-  transform: translateY(-1vh);
+  transform: translateY(-1dvh);
   cursor: pointer;
 }
 
@@ -375,7 +375,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .foregroundImg img {
   position: absolute;
   width: 104vw;
-  top: -0.3vh;
+  top: -0.3dvh;
 }
 
 .presentation {
@@ -390,7 +390,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 .searchBar {
   position: relative;
-  font-size: 3vh;
+  font-size: 3dvh;
   width: 100%;
   text-align: center;
   transition: 1s;
@@ -402,20 +402,20 @@ nav ul li:nth-child(5).active ~ .indicator {
   margin-left: auto;
   margin-right: auto;
   font-weight: 200;
-  padding: 2vh 4vh;
+  padding: 2dvh 4dvh;
   background: #d6b79d;
-  border-radius: 10vh;
-  border: 1vh solid #080e16;
-  font-size: 3vh;
+  border-radius: 10dvh;
+  border: 1dvh solid #080e16;
+  font-size: 3dvh;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
-  width: 50vh;
+  width: 50dvh;
   position: relative;
   transition: 1s;
 }
 
 .animated-text span {
   position: relative;
-  padding-left: 2vh;
+  padding-left: 2dvh;
 }
 
 .animated-text span::before {
@@ -533,8 +533,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- about -------------- */
 
 #about {
-  padding: 10vh 0;
-  margin-bottom: 60vh;
+  padding: 10dvh 0;
+  margin-bottom: 60dvh;
   position: relative;
   height: 100%;
   width: 100%;
@@ -582,7 +582,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .about-col-2 p {
   font-family: "Inconsolata", sans-serif;
   line-height: 130%;
-  margin-top: 3vh;
+  margin-top: 3dvh;
 }
 
 .sub-title {
@@ -624,7 +624,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 2vh 0;
+  margin: 2dvh 0;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -637,7 +637,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   opacity: 0;
   position: absolute;
   transition: 0.2s;
-  margin: 0 5vh;
+  margin: 0 5dvh;
 }
 
 .tab-contents.active-tab {
@@ -647,9 +647,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- services -------------- */
 
 #services {
-  padding-top: 20vh;
-  margin-bottom: 10vh;
-  padding-bottom: 60vh;
+  padding-top: 20dvh;
+  margin-bottom: 10dvh;
+  padding-bottom: 60dvh;
   background-image: url("/Images/ServicesBckgr.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -678,7 +678,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .services-list h2 {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 2vh;
+  margin-bottom: 2dvh;
 }
 
 .services-list p {
@@ -701,8 +701,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- portfolio -------------- */
 
 #portfolio {
-  padding-bottom: 9vh;
-  margin-bottom: 20vh;
+  padding-bottom: 9dvh;
+  margin-bottom: 20dvh;
 }
 
 .work-list {
@@ -802,8 +802,8 @@ nav ul li:nth-child(5).active ~ .indicator {
   background-image: url("/Images/ContactBckgr.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 15vh;
-  padding-bottom: 30vh;
+  padding-top: 15dvh;
+  padding-bottom: 30dvh;
 }
 
 .contact-left {
@@ -817,9 +817,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 .contact-left .emailIcon {
   position: absolute;
   text-align: center;
-  width: 4vh;
-  height: 4vh;
-  left: 55vh;
+  width: 4dvh;
+  height: 4dvh;
+  left: 55dvh;
   transition: 0.5s;
 }
 
