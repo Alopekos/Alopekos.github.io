@@ -43,20 +43,20 @@ body {
   flex-wrap: nowrap;
   justify-content: center;
   padding: 1%;
-  padding-left: 6dvh;
-  width: 24dvh;
+  padding-left: 6svh;
+  width: 24svh;
   height: 102%;
   background-image: url(/Images/NavBackground.png);
   background-repeat: repeat;
-  background-size: 30dvh;
+  background-size: 30svh;
   position: fixed;
-  left: -4dvh;
+  left: -4svh;
   top: -1%;
   bottom: -1%;
   transform: translateX(-120%);
-  border-radius: 5dvh;
+  border-radius: 5svh;
   z-index: 5;
-  border: 1dvh solid #241407;
+  border: 1svh solid #241407;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.8s ease;
   transition: 1s;
@@ -77,25 +77,25 @@ body {
 
 .cross-container img {
   position: relative;
-  width: 6d;
-  height: 6dvh;
+  width: 6svh;
+  height: 6svh;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 4px #9a672b;
   border-radius: 50%;
-  border: 0.5dvh solid #613514;
+  border: 0.5svh solid #613514;
   transition: 0.5s;
 }
 
 nav ul {
   display: grid;
   justify-content: center;
-  width: 14dvh;
-  height: 60dvh;
-  padding-top: 1dvh;
-  padding-bottom: 1dvh;
-  border: #613514 solid 0.5dvh;
-  border-radius: 5dvh;
+  width: 14svh;
+  height: 60svh;
+  padding-top: 1svh;
+  padding-bottom: 1svh;
+  border: #613514 solid 0.5svh;
+  border-radius: 5svh;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 8px #9a672b;
@@ -117,21 +117,21 @@ nav ul li a {
 
 .navIcon {
   color: #fff;
-  font-size: 5dvh;
-  height: 5dvh;
+  font-size: 5svh;
+  height: 5svh;
 }
 
 nav ul li a .icon {
   position: relative;
   display: block;
-  font-size: 5dvh;
-  height: 5dvh;
+  font-size: 5svh;
+  height: 5svh;
   text-align: center;
   transition: 0.5s;
 }
 
 nav ul li.active a .navIcon {
-  transform: translateY(-1dvh);
+  transform: translateY(-1svh);
   transition: 0.5s;
   color: #1b0d08;
 }
@@ -139,7 +139,7 @@ nav ul li.active a .navIcon {
 nav ul li a .text {
   position: absolute;
   color: #fff;
-  font-size: 2.5dvh;
+  font-size: 2.5svh;
   font-weight: 300;
   letter-spacing: -0.05em;
   transition: 0.7s;
@@ -149,41 +149,41 @@ nav ul li a .text {
 
 nav ul li.active a .text {
   opacity: 1;
-  transform: translateY(3.5dvh);
+  transform: translateY(3.5svh);
   color: #fff;
 }
 
 .indicator {
   display: none;
   position: absolute;
-  margin-top: 1dvh;
-  margin-left: 1.3dvh;
-  width: 11dvh;
-  height: 7dvh;
+  margin-top: 1svh;
+  margin-left: 1.3svh;
+  width: 11svh;
+  height: 7svh;
   background: #ddca7d;
-  border-radius: 3dvh;
+  border-radius: 3svh;
   border: 3px solid #ab7536;
   transition: 0.5s;
 }
 
 nav ul li:nth-child(1).active ~ .indicator {
-  transform: translateY(calc(10dvh * 0));
+  transform: translateY(calc(10svh * 0));
 }
 
 nav ul li:nth-child(2).active ~ .indicator {
-  transform: translateY(calc(11.5dvh * 1));
+  transform: translateY(calc(11.5svh * 1));
 }
 
 nav ul li:nth-child(3).active ~ .indicator {
-  transform: translateY(calc(11.5dvh * 2));
+  transform: translateY(calc(11.5svh * 2));
 }
 
 nav ul li:nth-child(4).active ~ .indicator {
-  transform: translateY(calc(11.5dvh * 3));
+  transform: translateY(calc(11.5svh * 3));
 }
 
 nav ul li:nth-child(5).active ~ .indicator {
-  transform: translateY(calc(11.5dvh * 4));
+  transform: translateY(calc(11.5svh * 4));
 }
 
 .resume {
@@ -197,10 +197,10 @@ nav ul li:nth-child(5).active ~ .indicator {
   align-items: center;
   justify-content: center;
   color: #fff;
-  width: 7dvh;
-  height: 7dvh;
+  width: 7svh;
+  height: 7svh;
   border-radius: 50%;
-  border: 0.5dvh solid #613514;
+  border: 0.5svh solid #613514;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
@@ -210,7 +210,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .resume button .text {
   position: absolute;
   color: #ffffff;
-  font-size: 2dvh;
+  font-size: 2svh;
   letter-spacing: 0.05em;
   opacity: 0;
   transition: 0.5s;
@@ -223,7 +223,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .resume .icon {
-  font-size: 4dvh;
+  font-size: 4svh;
   font-weight: bold;
 }
 
@@ -245,7 +245,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   top: 0;
   right: -300px;
   width: 300px;
-  height: 100dvh;
+  height: 100svh;
   padding-top: 50px;
   font-size: 25px;
   justify-content: center;
@@ -303,8 +303,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 .socialIcon {
   display: flex;
   text-align: center;
-  width: 4dvh;
-  height: 4dvh;
+  width: 4svh;
+  height: 4svh;
   margin-left: auto;
   margin-right: auto;
   transition: 0.5s;
@@ -313,7 +313,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .bar {
   position: fixed;
   display: space-between;
-  width: 10dvh;
+  width: 10svh;
   top: 0px;
   right: 0px;
   display: block;
@@ -322,7 +322,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .bar li {
-  height: 8dvh;
+  height: 8svh;
   display: flex;
   justify-content: center;
   justify-items: center;
@@ -337,7 +337,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   content: "";
   display: block;
   width: 2px;
-  height: 30dvh;
+  height: 30svh;
   margin: 0 auto;
   background-color: #fff;
   margin-bottom: 20px;
@@ -347,14 +347,14 @@ nav ul li:nth-child(5).active ~ .indicator {
   content: "";
   display: block;
   width: 2px;
-  height: 40dvh;
+  height: 40svh;
   margin: 0 auto;
   background-color: #fff;
 }
 
 .socialIcon:hover {
   color: #c3a05f;
-  transform: translateY(-1dvh);
+  transform: translateY(-1svh);
   cursor: pointer;
 }
 
@@ -375,7 +375,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .foregroundImg img {
   position: absolute;
   width: 104vw;
-  top: -0.3dvh;
+  top: -0.3svh;
 }
 
 .presentation {
@@ -390,7 +390,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 .searchBar {
   position: relative;
-  font-size: 3dvh;
+  font-size: 3svh;
   width: 100%;
   text-align: center;
   transition: 1s;
@@ -402,20 +402,20 @@ nav ul li:nth-child(5).active ~ .indicator {
   margin-left: auto;
   margin-right: auto;
   font-weight: 200;
-  padding: 2dvh 4dvh;
+  padding: 2svh 4svh;
   background: #d6b79d;
-  border-radius: 10dvh;
-  border: 1dvh solid #080e16;
-  font-size: 3dvh;
+  border-radius: 10svh;
+  border: 1svh solid #080e16;
+  font-size: 3svh;
   box-shadow: 5px 5px 1px rgba(0, 0, 0, 0.5);
-  width: 50dvh;
+  width: 50svh;
   position: relative;
   transition: 1s;
 }
 
 .animated-text span {
   position: relative;
-  padding-left: 2dvh;
+  padding-left: 2svh;
 }
 
 .animated-text span::before {
@@ -533,8 +533,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- about -------------- */
 
 #about {
-  padding: 10dvh 0;
-  margin-bottom: 60dvh;
+  padding: 10svh 0;
+  margin-bottom: 60svh;
   position: relative;
   height: 100%;
   width: 100%;
@@ -582,7 +582,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .about-col-2 p {
   font-family: "Inconsolata", sans-serif;
   line-height: 130%;
-  margin-top: 3dvh;
+  margin-top: 3svh;
 }
 
 .sub-title {
@@ -624,7 +624,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 2dvh 0;
+  margin: 2svh 0;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -637,7 +637,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   opacity: 0;
   position: absolute;
   transition: 0.2s;
-  margin: 0 5dvh;
+  margin: 0 5svh;
 }
 
 .tab-contents.active-tab {
@@ -647,9 +647,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- services -------------- */
 
 #services {
-  padding-top: 20dvh;
-  margin-bottom: 10dvh;
-  padding-bottom: 60dvh;
+  padding-top: 20svh;
+  margin-bottom: 10svh;
+  padding-bottom: 60svh;
   background-image: url("/Images/ServicesBckgr.png");
   background-repeat: no-repeat;
   background-size: cover;
@@ -678,7 +678,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .services-list h2 {
   font-size: 30px;
   font-weight: 500;
-  margin-bottom: 2dvh;
+  margin-bottom: 2svh;
 }
 
 .services-list p {
@@ -701,8 +701,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- portfolio -------------- */
 
 #portfolio {
-  padding-bottom: 9dvh;
-  margin-bottom: 20dvh;
+  padding-bottom: 9svh;
+  margin-bottom: 20svh;
 }
 
 .work-list {
@@ -802,8 +802,8 @@ nav ul li:nth-child(5).active ~ .indicator {
   background-image: url("/Images/ContactBckgr.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 15dvh;
-  padding-bottom: 30dvh;
+  padding-top: 15svh;
+  padding-bottom: 30svh;
 }
 
 .contact-left {
@@ -817,9 +817,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 .contact-left .emailIcon {
   position: absolute;
   text-align: center;
-  width: 4dvh;
-  height: 4dvh;
-  left: 55dvh;
+  width: 4svh;
+  height: 4svh;
+  left: 55svh;
   transition: 0.5s;
 }
 
@@ -934,21 +934,21 @@ nav .menuicon {
 
   .bar {
     transition: 0.5s;
-    width: 6dvh;
+    width: 6svh;
   }
   .navbar {
-    height: 60dvh;
-    width: 23dvh;
-    min-width: 17dvh;
-    left: -11dvh;
-    top: 30dvh;
-    padding-left: 10.5dvh;
+    height: 60svh;
+    width: 23svh;
+    min-width: 17svh;
+    left: -11svh;
+    top: 30svh;
+    padding-left: 10.5svh;
     transition: 1s;
   }
 
   .cross-container img {
-    height: 10dvh;
-    width: 10dvh;
+    height: 10svh;
+    width: 10svh;
   }
 
   .openmenu {
@@ -956,19 +956,19 @@ nav .menuicon {
     display: flex;
     background-image: url(/Images/NavLiBackground.png);
     background-size: contain;
-    box-shadow: inset 0px 0px 0px 0.5dvh #9a672b;
+    box-shadow: inset 0px 0px 0px 0.5svh #9a672b;
     border-radius: 50%;
-    height: 10dvh;
-    width: 10dvh;
+    height: 10svh;
+    width: 10svh;
     justify-content: center;
     align-items: center;
-    border: 0.5dvh solid #613514;
+    border: 0.5svh solid #613514;
   }
 
   nav .menuicon {
     display: inline-block;
-    height: 6dvh;
-    width: 6dvh;
+    height: 6svh;
+    width: 6svh;
     cursor: pointer;
   }
 
@@ -981,29 +981,29 @@ nav .menuicon {
   }
 
   .searchBar {
-    font-size: 2dvh;
+    font-size: 2svh;
     transition: 1s;
   }
 
   .animated-text {
-    font-size: 2dvh;
-    padding-left: 1.5dvh;
-    width: 30dvh;
+    font-size: 2svh;
+    padding-left: 1.5svh;
+    width: 30svh;
     transition: 1s;
   }
   .animated-text span {
     position: relative;
-    padding-left: 2dvh;
+    padding-left: 2svh;
   }
 
   .sleepyFox {
-    top: 51dvh;
-    left: 19dvh;
+    top: 51svh;
+    left: 19svh;
   }
 
   .sleepyFox img {
-    width: 8.5dvh;
-    height: 8.5dvh;
+    width: 8.5svh;
+    height: 8.5svh;
   }
 
   .sub-title {
@@ -1015,10 +1015,10 @@ nav .menuicon {
   }
 
   #canvas {
-    left: 17dvh;
-    top: 21dvh;
-    width: 130dvh;
-    height: 60dvh;
+    left: 17svh;
+    top: 21svh;
+    width: 130svh;
+    height: 60svh;
   }
 
   .about-col-1 {
@@ -1057,6 +1057,6 @@ nav .menuicon {
   .copyright p {
     font-size: 14px;
     position: absolute;
-    bottom: 0dvh;
+    bottom: 0svh;
   }
 }
