@@ -360,12 +360,19 @@
           </div>
           <div class="contact-right">
             <form name="submit-to-google-sheet">
-              <input type="text" name="Name" placeholder="Your name" required />
+              <input
+                type="text"
+                name="Name"
+                placeholder="Your name"
+                required
+                onclick="navClose()"
+              />
               <textarea
                 class="message-input"
                 name="Message"
                 rows="10"
                 placeholder="Your message."
+                onclick="navClose()"
               ></textarea>
               <button type="submit" class="btn btn2">
                 <ion-icon class="sendIcon" name="send"></ion-icon>

@@ -12,6 +12,8 @@
   box-sizing: border-box;
   color: #fff;
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent !important;
+  -webkit-focus-ring-color: transparent !important;
 }
 
 html {
@@ -373,7 +375,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .foregroundImg img {
   position: absolute;
   width: 104vw;
-  top: 0vh;
+  top: -0.3vh;
 }
 
 .presentation {
@@ -897,6 +899,13 @@ form .btn2 {
   z-index: 4;
 }
 
+#msg {
+  color: #a07017;
+  display: block;
+  position: absolute;
+  text-align: center;
+}
+
 /* ------------- CSS small screen -------------- */
 
 nav .menuicon {
@@ -1045,14 +1054,9 @@ nav .menuicon {
     flex-basis: 100%;
   }
 
-  .copyright {
+  .copyright p {
     font-size: 14px;
+    position: absolute;
+    bottom: 0dvh;
   }
-}
-
-#msg {
-  color: #a07017;
-  display: block;
-  position: absolute;
-  text-align: center;
 }
