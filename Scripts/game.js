@@ -126,6 +126,7 @@ const keys = {
   },
 };
 
+var stop = false;
 var frameCount = 0;
 var fps, fpsInterval, startTime, now, then, elapsed;
 
@@ -138,6 +139,11 @@ function startAnimating(fps) {
 }
 
 function animate(newtime) {
+  if (stop) {
+    sleepyFox.style.display = "block";
+    return;
+  }
+
   window.requestAnimationFrame(animate);
 
   now = newtime;

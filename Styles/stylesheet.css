@@ -17,14 +17,15 @@
 html {
   scroll-behavior: smooth;
   height: 100%;
-  overflow: auto;
   overflow-x: hidden;
-  overflow-y: auto;
 }
 
 body {
   background-image: url("/Images/BackgroundPixelArt.png");
   background-color: #131f2f;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
   background-size: 104vw;
   background-repeat: no-repeat;
 }
@@ -110,7 +111,6 @@ nav ul li a {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: transition;
 }
 
 .navIcon {
@@ -380,7 +380,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .presentation {
   position: relative;
-  width: 100vw;
+  width: 100%;
   top: -1vw;
   margin-bottom: 60vw;
   align-items: center;
@@ -391,9 +391,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 .searchBar {
   position: relative;
   font-size: 3vh;
-  width: 30vh;
-  left: 47%;
-  transition: 1sec;
+  width: 100%;
+  text-align: center;
+  transition: 1s;
 }
 
 .animated-text {
@@ -500,7 +500,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .sleepyFox img {
   width: 4.5vw;
-  height: 4.5w;
+  height: 4.5vw;
 }
 
 .wasdAnim {
@@ -533,9 +533,11 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- about -------------- */
 
 #about {
-  padding: 90px 0;
+  padding: 10vh 0;
   margin-bottom: 60vh;
   position: relative;
+  height: 100%;
+  width: 100%;
 }
 
 .row {
@@ -580,7 +582,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .about-col-2 p {
   font-family: "Inconsolata", sans-serif;
   line-height: 130%;
-  margin-top: 15px;
+  margin-top: 3vh;
 }
 
 .sub-title {
@@ -622,7 +624,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .tab-contents ul li {
   list-style: none;
-  margin: 10px 0;
+  margin: 2vh 0;
   font-family: "Inconsolata", sans-serif;
 }
 
@@ -635,6 +637,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   opacity: 0;
   position: absolute;
   transition: 0.2s;
+  margin: 0 5vh;
 }
 
 .tab-contents.active-tab {
@@ -902,22 +905,37 @@ nav .menuicon {
   display: none;
 }
 
-@media only screen and (max-width: 135vh) {
+@media only screen and (max-width: 900px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
+  body {
+    background-size: cover;
+    background-position: top left;
+    position: relative;
+  }
+
+  .foregroundImg img {
+    display: none;
+  }
+
   #menu {
     display: none;
   }
 
   .bar {
     transition: 0.5s;
+    width: 6vh;
   }
   .navbar {
     height: 60vh;
-    width: 30vw;
+    width: 23vh;
     min-width: 17vh;
-    left: -11vw;
+    left: -11vh;
     top: 30vh;
-    padding-top: 50px;
-    padding-bottom: 50px;
+    padding-left: 10.5vh;
     transition: 1s;
   }
 
@@ -951,13 +969,34 @@ nav .menuicon {
     display: none;
   }
 
+  .presentation {
+    margin-bottom: 1000px;
+  }
+
   .searchBar {
-    left: 43%;
-    transition: 1sec;
+    font-size: 2vh;
+    transition: 1s;
   }
 
   .animated-text {
-    transition: 1sec;
+    font-size: 2vh;
+    padding-left: 1.5vh;
+    width: 30vh;
+    transition: 1s;
+  }
+  .animated-text span {
+    position: relative;
+    padding-left: 2vh;
+  }
+
+  .sleepyFox {
+    top: 51vh;
+    left: 19vh;
+  }
+
+  .sleepyFox img {
+    width: 8.5vh;
+    height: 8.5vh;
   }
 
   .sub-title {
@@ -968,6 +1007,13 @@ nav .menuicon {
     display: none;
   }
 
+  #canvas {
+    left: 17vh;
+    top: 21vh;
+    width: 130vh;
+    height: 60vh;
+  }
+
   .about-col-1 {
     margin-bottom: 250px;
     display: flex;
@@ -976,7 +1022,6 @@ nav .menuicon {
     align-items: center;
     text-align: center;
     transition: 0.5s;
-    text-wrap: wrap;
     flex-basis: 100%;
     margin-left: 20%;
     margin-right: 20%;

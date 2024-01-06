@@ -33,7 +33,7 @@ window.addEventListener(
       wasd.style.display = "none";
       presentation.style.transform = "translateY(-320px)";
       gameHasStarted = true;
-      return gameHasStarted;
+      return;
     }
   },
   false
