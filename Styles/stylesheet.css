@@ -382,7 +382,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   position: relative;
   width: 100vw;
   top: -1vw;
-  margin-bottom: 120vh;
+  margin-bottom: 60vw;
   align-items: center;
   justify-content: center;
   transform: translateY(0px);
@@ -525,6 +525,8 @@ nav ul li:nth-child(5).active ~ .indicator {
   top: 12.1vw;
   width: 70vw;
   height: 32.9vw;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
   z-index: -1;
 }
 

@@ -126,72 +126,90 @@ const keys = {
   },
 };
 
-function animate() {
-  window.requestAnimationFrame(animate);
-  c.fillStyle = "rgba(0,0,0, 0)";
-  c.clearRect(0, 0, canvas.width, canvas.height);
+var frameCount = 0;
+var fps, fpsInterval, startTime, now, then, elapsed;
 
-  collisionBlocks.forEach((collisionBlock) => {
-    collisionBlock.update();
-  });
-  platformCollisionBlocks.forEach((block) => {
-    block.update();
-  });
+startAnimating(60);
 
-  player.update();
-
-  player.velocity.x = 0;
-
-  if (keys.KeyD.pressed) {
-    player.switchSprite("Run");
-    player.velocity.x = 4;
-    player.lastDirection = "right";
-  } else if (keys.KeyA.pressed) {
-    player.switchSprite("RunLeft");
-    player.velocity.x = -4;
-    player.lastDirection = "left";
-  } else if (keys.KeyS.pressed) {
-    if (player.lastDirection === "right") {
-      player.switchSprite("Sit");
-    } else player.switchSprite("SitLeft");
-  } else if (player.velocity.y === 0) {
-    if (player.lastDirection === "right") {
-      player.switchSprite("Idle");
-    } else player.switchSprite("IdleLeft");
-  }
-
-  if (player.velocity.y < 0) {
-    if (player.lastDirection === "right") player.switchSprite("Jump");
-    else player.switchSprite("JumpLeft");
-  } else if (player.velocity.y > 0) {
-    if (player.lastDirection === "right") player.switchSprite("Fall");
-    else player.switchSprite("FallLeft");
-  }
-
-  c.restore();
+function startAnimating(fps) {
+  fpsInterval = 1000 / fps;
+  then = window.performance.now();
+  startTime = then;
 }
 
-window.addEventListener("keydown", (event) => {
-  switch (event.code) {
-    case "KeyD":
-      keys.KeyD.pressed = true;
-      keys.KeyS.pressed = false;
-      break;
-    case "KeyA":
-      keys.KeyA.pressed = true;
-      keys.KeyS.pressed = false;
-      break;
-    case "KeyW":
-      if (player.velocity.y === 0) {
-        player.velocity.y = -7.3;
-        keys.KeyW.pressed = true;
-        keys.KeyS.pressed = false;
-      }
-      break;
-    case "KeyS":
-      keys.KeyS.pressed = true;
+function animate(newtime) {
+  window.requestAnimationFrame(animate);
+
+  now = newtime;
+  elapsed = now - then;
+
+  if (elapsed > fpsInterval) {
+    then = now - (elapsed % fpsInterval);
+
+    c.fillStyle = "rgba(0,0,0, 0)";
+    c.clearRect(0, 0, canvas.width, canvas.height);
+    collisionBlocks.forEach((collisionBlock) => {
+      collisionBlock.update();
+    });
+    platformCollisionBlocks.forEach((block) => {
+      block.update();
+    });
+
+    player.update();
+
+    player.velocity.x = 0;
+
+    if (keys.KeyD.pressed) {
+      player.switchSprite("Run");
+      player.velocity.x = 4;
+      player.lastDirection = "right";
+    } else if (keys.KeyA.pressed) {
+      player.switchSprite("RunLeft");
+      player.velocity.x = -4;
+      player.lastDirection = "left";
+    } else if (keys.KeyS.pressed) {
+      if (player.lastDirection === "right") {
+        player.switchSprite("Sit");
+      } else player.switchSprite("SitLeft");
+    } else if (player.velocity.y === 0) {
+      if (player.lastDirection === "right") {
+        player.switchSprite("Idle");
+      } else player.switchSprite("IdleLeft");
+    }
+
+    if (player.velocity.y < 0) {
+      if (player.lastDirection === "right") player.switchSprite("Jump");
+      else player.switchSprite("JumpLeft");
+    } else if (player.velocity.y > 0) {
+      if (player.lastDirection === "right") player.switchSprite("Fall");
+      else player.switchSprite("FallLeft");
+    }
+
+    c.restore();
   }
-});
+
+  window.addEventListener("keydown", (event) => {
+    switch (event.code) {
+      case "KeyD":
+        keys.KeyD.pressed = true;
+        keys.KeyS.pressed = false;
+        break;
+      case "KeyA":
+        keys.KeyA.pressed = true;
+        keys.KeyS.pressed = false;
+        break;
+      case "KeyW":
+        if (player.velocity.y === 0) {
+          player.velocity.y = -7.3;
+          keys.KeyW.pressed = true;
+          keys.KeyS.pressed = false;
+        }
+        break;
+      case "KeyS":
+        keys.KeyS.pressed = true;
+    }
+  });
+}
 
 window.addEventListener("keyup", (event) => {
   switch (event.code) {
