@@ -928,27 +928,31 @@ nav .menuicon {
     display: none;
   }
 
-  #menu {
-    display: none;
-  }
-
   .bar {
     transition: 0.5s;
-    width: 6svh;
+    width: 5svh;
   }
   .navbar {
-    height: 60svh;
-    width: 23svh;
-    min-width: 17svh;
-    left: -11svh;
+    height: 40svh;
+    width: 17svh;
+    align-items: right;
+    justify-content: right;
+    grid-gap: 0svh;
+    border: 0.8svh solid #241407;
     top: 30svh;
-    padding-left: 10.5svh;
+    left: -10.7svh;
+    padding-top: 1svh;
+    padding-right: 0.5svh;
     transition: 1s;
   }
 
+  nav ul {
+    display: none;
+  }
+
   .cross-container img {
-    height: 10svh;
-    width: 10svh;
+    height: 5svh;
+    width: 5svh;
   }
 
   .openmenu {
@@ -958,8 +962,8 @@ nav .menuicon {
     background-size: contain;
     box-shadow: inset 0px 0px 0px 0.5svh #9a672b;
     border-radius: 50%;
-    height: 10svh;
-    width: 10svh;
+    height: 5svh;
+    width: 5svh;
     justify-content: center;
     align-items: center;
     border: 0.5svh solid #613514;
@@ -967,8 +971,8 @@ nav .menuicon {
 
   nav .menuicon {
     display: inline-block;
-    height: 6svh;
-    width: 6svh;
+    height: 3svh;
+    width: 3svh;
     cursor: pointer;
   }
 
