@@ -1,8 +1,3 @@
-//onload navBar
-setTimeout(() => {
-  navBar.style.transform = "translateX(0)";
-}, 1000).onload;
-
 //Close NavBar
 function navClose() {
   setTimeout(() => {
@@ -57,9 +52,9 @@ let prevScrollPos = window.scrollY;
 window.addEventListener("scroll", () => {
   let currScrollPos = window.scrollY;
 
-  if (currScrollPos > prevScrollPos) {
+  if (currScrollPos < prevScrollPos) {
     navBar.style.transform = "translateX(-120%)";
-  } else if (prevScrollPos > currScrollPos) {
+  } else if (prevScrollPos < currScrollPos) {
     navBar.style.transform = "translateX(0)";
   }
 
