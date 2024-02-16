@@ -21,35 +21,35 @@ const setBackground = () => {
       "url('/Images/BackgroundPixelArt-Spring.png')";
     setTimeout(() => {
       foreground.src = "/Images/Foreground-Spring.png";
-    }, 2000);
+    }, 500);
     return;
   } else if (totalMonth >= 6 && totalMonth <= 8) {
     document.body.style.backgroundImage =
       "url('/Images/BackgroundPixelArt-Summer.png')";
     setTimeout(() => {
       foreground.src = "/Images/Foreground-Summer.png";
-    }, 2000);
+    }, 500);
     return;
   } else if (totalMonth >= 9 && totalMonth <= 11) {
     document.body.style.backgroundImage =
       "url('/Images/BackgroundPixelArt-Fall.png')";
     setTimeout(() => {
       foreground.src = "/Images/Foreground-Fall.png";
-    }, 2000);
+    }, 500);
     return;
   } else if (totalMonth == 12 || totalMonth == 1 || totalMonth == 2) {
     document.body.style.backgroundImage =
       "url('/Images/BackgroundPixelArt-Winter.png')";
     setTimeout(() => {
       foreground.src = "/Images/Foreground-Winter.png";
-    }, 2000);
+    }, 500);
     return;
   } else {
     document.body.style.backgroundImage =
       "url('/Images/BackgroundPixelArt-Winter.png')";
     setTimeout(() => {
       foreground.src = "/Images/Foreground-Winter.png";
-    }, 2000);
+    }, 500);
     return;
   }
 };

@@ -40,6 +40,7 @@ body {
   display: grid;
   flex-direction: column;
   flex-wrap: nowrap;
+  align-items: center;
   justify-content: center;
   padding: 1%;
   padding-left: 6svh;
@@ -933,7 +934,6 @@ nav .menuicon {
   .navbar {
     height: 40svh;
     width: 17svh;
-    align-items: right;
     justify-content: right;
     grid-gap: 0svh;
     border: 0.8svh solid #241407;
