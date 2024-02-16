@@ -23,8 +23,8 @@ html {
 }
 
 body {
-  background-image: url("/Images/BackgroundPixelArt.png");
-  background-color: #131f2f;
+  background-image: none;
+  background-color: #090b0f;
   width: 100%;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -38,7 +38,6 @@ body {
 
 .navbar {
   display: grid;
-  align-items: center;
   flex-direction: column;
   flex-wrap: nowrap;
   justify-content: center;
@@ -116,7 +115,7 @@ nav ul li a {
 }
 
 .navIcon {
-  color: #fff;
+  color: #000;
   font-size: 5svh;
   height: 5svh;
 }
@@ -133,7 +132,7 @@ nav ul li a .icon {
 nav ul li.active a .navIcon {
   transform: translateY(-1svh);
   transition: 0.5s;
-  color: #1b0d08;
+  color: #fff;
 }
 
 nav ul li a .text {
@@ -157,12 +156,11 @@ nav ul li.active a .text {
   display: none;
   position: absolute;
   margin-top: 1svh;
-  margin-left: 1.3svh;
-  width: 11svh;
+  margin-left: 0;
+  width: 12svh;
   height: 7svh;
-  background: #ddca7d;
-  border-radius: 3svh;
-  border: 3px solid #ab7536;
+  background: #9a672b;
+  border-radius: 2svh;
   transition: 0.5s;
 }
 
@@ -375,7 +373,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .foregroundImg img {
   position: absolute;
   width: 104vw;
-  top: -0.3svh;
+  top: 0;
 }
 
 .presentation {
@@ -450,19 +448,19 @@ nav ul li:nth-child(5).active ~ .indicator {
   }
   21%,
   40% {
-    content: "a web developer";
+    content: "un développeur web";
   }
   41%,
   60% {
-    content: "a pixel artist";
+    content: "un pixel artist";
   }
   61%,
   80% {
-    content: "a web designer";
+    content: "un web designer";
   }
   81%,
   100% {
-    content: "a fox enthusiast";
+    content: "un amateur de renards";
   }
 }
 
@@ -505,13 +503,13 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .wasdAnim {
   position: absolute;
-  left: 20vw;
-  top: 30vw;
+  left: 47vw;
+  top: 15svh;
 }
 
 .wasdAnim img {
-  width: 5vw;
-  height: 3vw;
+  width: 10svh;
+  height: 10svh;
 }
 
 .container-game {

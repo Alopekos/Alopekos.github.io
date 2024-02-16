@@ -8,6 +8,44 @@ function navClose() {
 function navCloseInstant() {
   navBar.style.transform = "translateX(-120%)";
 }
+//background img
+
+const setBackground = () => {
+  const foreground = document.getElementById("foreground-img");
+  const currentTime = new Date();
+  const month = currentTime.getMonth() + 1;
+  let totalMonth = month;
+
+  if (totalMonth >= 3 && totalMonth <= 5) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Spring.png')";
+    foreground.src = "/Images/Foreground-Spring.png";
+    return;
+  } else if (totalMonth >= 6 && totalMonth <= 8) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Summer.png')";
+    foreground.src = "/Images/Foreground-Summer.png";
+    return;
+  } else if (totalMonth >= 9 && totalMonth <= 11) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Fall.png')";
+    foreground.src = "/Images/Foreground-Fall.png";
+    return;
+  } else if (totalMonth == 12 || totalMonth == 1 || totalMonth == 2) {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Winter.png')";
+    foreground.src = "/Images/Foreground-Winter.png";
+    return;
+  } else {
+    document.body.style.backgroundImage =
+      "url('/Images/BackgroundPixelArt-Spring.png')";
+    foreground.src = "/Images/Foreground-Spring.png";
+    return;
+  }
+};
+window.onload = () => {
+  setBackground();
+};
 
 //game
 let gameHasStarted = false;

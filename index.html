@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE-edge" />
@@ -38,7 +38,7 @@
                   <span class="icon">
                     <ion-icon class="navIcon" name="home-outline"></ion-icon>
                   </span>
-                  <span class="text">Home</span>
+                  <span class="text">Accueil</span>
                 </a>
               </li>
               <li onclick="navClose()" class="list">
@@ -49,7 +49,7 @@
                       name="person-circle-outline"
                     ></ion-icon>
                   </span>
-                  <span class="text">Profile</span>
+                  <span class="text">Profil</span>
                 </a>
               </li>
               <li onclick="navClose()" class="list">
@@ -89,7 +89,7 @@
                 <span
                   ><ion-icon class="icon" name="document-outline"></ion-icon
                 ></span>
-                <span class="text">Resume</span>
+                <span class="text">C.V.</span>
               </button>
             </div>
             <div class="openmenu">
@@ -108,7 +108,7 @@
                 <span class="icon">
                   <ion-icon class="navIcon" name="home-outline"></ion-icon>
                 </span>
-                Home</a
+                Accueil</a
               >
             </li>
             <li class="sidelist">
@@ -119,7 +119,7 @@
                     name="person-circle-outline"
                   ></ion-icon>
                 </span>
-                Profile</a
+                Profil</a
               >
             </li>
             <li class="sidelist">
@@ -153,7 +153,7 @@
               >
             </li>
             <li class="sidelistResume">
-              <a href="#" onclick="closemenu()">Resume</a>
+              <a href="#" onclick="closemenu()">C.V.</a>
             </li>
             <img
               class="closeicon"
@@ -186,7 +186,7 @@
       <!-- ------ Presentation/minigame ------ -->
 
       <div class="foregroundImg">
-        <img src="/Images/Foreground.png" />
+        <img id="foreground-img" src="" />
       </div>
       <div class="container-game">
         <div class="game">
@@ -195,7 +195,7 @@
       </div>
       <div class="presentation">
         <div class="searchBar">
-          <p>- Hi, I'm -</p>
+          <p>- Bonjour, je suis -</p>
         </div>
         <div class="animated-text">
           <span></span>
@@ -218,64 +218,71 @@
             <img src="Images/Profile-Picture.jpg" />
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">About me</h1>
+            <h1 class="sub-title">Présentation</h1>
             <p>
-              Hi ! My name is Rémi Legrand. <br />
-              I am an aspiring front-end web developer and UX/UI designer. As a
-              programmer, my passion lies in crafting distinctive and responsive
-              user interfaces.
+              Bonjour, je m'appelle Rémi Legrand. <br />
+              Je suis un aspirant développeur web front-end et designer UX/UI.
+              En tant que programmeur, ma passion est de créer des interfaces
+              utilisateur originales et réactives.
             </p>
             <p>
-              Passionate about pixel art and programming, I am always curious to
-              learn more about new technologies and creative coding.
+              Passionné de pixel art et de programmation, je suis toujours
+              curieux d'en apprendre plus sur les nouvelles technologies et le
+              codage innovant.
             </p>
-            <p>Let's get in touch !</p>
+            <p>Entrons en contact !</p>
 
             <div class="tab-titles">
               <h1 class="tab-links active-link" onclick="openTab('skills')">
-                Skills
+                Compétences
               </h1>
               <h1 class="tab-links" onclick="openTab('experience')">
-                Experience
+                Expérience
               </h1>
               <h1 class="tab-links" onclick="openTab('education')">
-                Education
+                Éducation
               </h1>
             </div>
             <div class="tab-contents active-tab" id="skills">
               <ul>
-                <li><span>UI/UX</span><br />Designing Web App interfaces</li>
                 <li>
-                  <span>Web developpement</span><br />Web app developpement
+                  <span>UI/UX</span><br />Conception d'interfaces d'applications
+                  Web
                 </li>
                 <li>
-                  <span>Software and Technichal</span><br />HTML, CSS,
+                  <span>Web developpement</span><br />Développement
+                  d'applications web.
+                </li>
+                <li>
+                  <span>Logiciels et technologies</span><br />HTML, CSS,
                   JavaScript, Photoshop, Git, GitHub, Visual Studio
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="experience">
               <ul>
-                <li><span>2023 - Current</span><br />Self-taught programmer</li>
                 <li>
-                  <span>2022 - 2023</span><br />English tutor at "Abaque",
+                  <span>2023 - en cours</span><br />Programmeur autodidacte
+                </li>
+                <li>
+                  <span>2022 - 2023</span><br />Professeur d'anglais à "Abaque",
                   Grenoble
                 </li>
                 <li>
-                  <span>2014</span><br />Observation internship in web
-                  design/web development at "La Haute Société", Grenoble.
+                  <span>2014</span><br />Stage d'observation en conception web
+                  design/web development à "La Haute Société", Grenoble.
                 </li>
               </ul>
             </div>
             <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span>2022</span><br />Master's degree in English Literature
-                  (LLCER) at Université Grenoble Alpes.
+                  <span>2022</span><br />Master en littérature anglaise (LLCER)
+                  à l'Université Grenoble Alpes.
                 </li>
                 <li>
-                  <span>2020</span><br />Bachelor's degree in Applied Foreign
-                  Languages (LEA) at Université Grenoble Alpes.
+                  <span>2020</span><br />Licence en Langues Etrangères
+                  Appliquées (LEA) à l'Université Grenoble Alpes.
                 </li>
               </ul>
             </div>
@@ -288,7 +295,7 @@
 
     <div id="services">
       <div class="container">
-        <h1 class="sub-title">My Services</h1>
+        <h1 class="sub-title">Mes Services</h1>
         <div class="services-list">
           <div>
             <h2>Web Dev</h2>
@@ -296,7 +303,7 @@
             <a href="#">Learn more</a>
           </div>
           <div>
-            <h2>UI/uX Design</h2>
+            <h2>UI/UX Design</h2>
             <p>This section is not yet available.</p>
             <a href="#">Learn more</a>
           </div>
@@ -313,12 +320,12 @@
 
     <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title">My Work</h1>
+        <h1 class="sub-title">Mes Projets</h1>
         <div class="work-list">
           <div class="work">
             <img src="Images/NoImage.jpg" />
             <div class="layer">
-              <h3>Project</h3>
+              <h3>Projet</h3>
               <p>No project available yet.</p>
               <a href=""
                 ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
@@ -328,7 +335,7 @@
           <div class="work">
             <img src="Images/NoImage.jpg" />
             <div class="layer">
-              <h3>Project</h3>
+              <h3>Projet</h3>
               <p>No project available yet.</p>
               <a href=""
                 ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
@@ -338,7 +345,7 @@
           <div class="work">
             <img src="Images/NoImage.jpg" />
             <div class="layer">
-              <h3>Project</h3>
+              <h3>Projet</h3>
               <p>No project available yet.</p>
               <a href=""
                 ><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
@@ -346,7 +353,7 @@
             </div>
           </div>
         </div>
-        <a href="#" class="btn">See more</a>
+        <a href="#" class="btn">Voir plus</a>
       </div>
     </div>
 
@@ -356,7 +363,7 @@
       <div class="container">
         <div class="row">
           <div class="contact-left">
-            <h1 class="sub-title">Contact me</h1>
+            <h1 class="sub-title">Me Contacter</h1>
             <p></p>
             <p>
               remi_legrand@icloud.com<a
