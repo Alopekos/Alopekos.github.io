@@ -90,6 +90,7 @@ body {
 nav ul {
   display: grid;
   justify-content: center;
+  justify-items: center;
   width: 14svh;
   height: 60svh;
   padding-top: 1svh;
@@ -107,6 +108,8 @@ nav ul li {
   display: flex;
   z-index: 1;
   gap: 0;
+  padding-bottom: 2svh;
+  padding-top: 2svh;
 }
 
 nav ul li a {
@@ -116,7 +119,7 @@ nav ul li a {
 }
 
 .navIcon {
-  color: #000;
+  color: #382b1e;
   font-size: 5svh;
   height: 5svh;
 }
@@ -151,6 +154,15 @@ nav ul li.active a .text {
   opacity: 1;
   transform: translateY(3.5svh);
   color: #fff;
+}
+
+hr {
+  height: 1px;
+  color: #613514;
+  margin-top: 1svh;
+  padding: 0;
+  width: 13svh;
+  z-index: 3;
 }
 
 .indicator {
@@ -221,12 +233,11 @@ nav ul li:nth-child(5).active ~ .indicator {
   transform: translateY(0px);
 }
 
-.resume .icon {
-  font-size: 4svh;
-  font-weight: bold;
+.resume img {
+  height: 30px;
 }
 
-.resume button:hover .icon {
+.resume button:hover img {
   animation: rotate 0.3s ease-in forwards;
   animation-iteration-count: 1;
 }
@@ -505,7 +516,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 .wasdAnim {
   position: absolute;
   left: 47vw;
-  top: 15svh;
+  top: 20svh;
 }
 
 .wasdAnim img {
