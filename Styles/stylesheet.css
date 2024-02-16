@@ -372,8 +372,8 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ----------- Presentation/minigame ------------ */
 .foregroundImg img {
   position: absolute;
-  width: 104vw;
-  top: 0;
+  width: 104.1vw;
+  top: -0.1vw;
 }
 
 .presentation {
