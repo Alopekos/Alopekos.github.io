@@ -192,7 +192,7 @@ nav ul li:nth-child(9).active ~ .indicator {
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
-  cursor: pointer;
+  cursor: not-allowed;
 }
 
 .resume button .text {
@@ -376,6 +376,7 @@ nav ul li:nth-child(9).active ~ .indicator {
   position: relative;
   width: 100%;
   top: -1vw;
+  margin-top: 5vh;
   margin-bottom: 60vw;
   align-items: center;
   justify-content: center;
@@ -392,7 +393,6 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .animated-text {
   display: flex;
-  position: absolute;
   margin-left: auto;
   margin-right: auto;
   font-weight: 200;
@@ -499,13 +499,30 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .wasdAnim {
   position: absolute;
-  left: 47vw;
-  top: 18svh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  top: 24.9svw;
+  animation: blinker 5s ease-in-out infinite;
+  opacity: 0.3;
 }
 
 .wasdAnim img {
-  width: 10svh;
-  height: 13svh;
+  width: 5svw;
+  height: 6svw;
+}
+
+.wasdAnim p {
+  font-size: 1svw;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
 }
 
 .container-game {
@@ -676,7 +693,7 @@ h1 {
 }
 
 .services-list div:hover {
-  cursor: wait;
+  cursor: pointer;
 }
 
 .services-list h2 {
@@ -695,6 +712,7 @@ h1 {
   font-size: 12px;
   margin-top: 20px;
   display: inline-block;
+  cursor: not-allowed;
 }
 
 .services-list div:hover {
@@ -711,6 +729,7 @@ h1 {
 
 .work-list {
   display: grid;
+  justify-items: center;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 50px;
   margin-top: 50px;
@@ -724,6 +743,7 @@ h1 {
 .work img {
   width: 100%;
   display: block;
+  opacity: 0.7;
   transition: tranforms 1s;
 }
 
@@ -772,6 +792,11 @@ h1 {
   width: 30px;
   height: 30px;
   color: #a07017;
+  cursor: pointer;
+}
+
+.layer .no-link-icon {
+  cursor: not-allowed;
 }
 
 .work:hover img {
@@ -811,11 +836,12 @@ h1 {
 }
 
 .contact-left {
-  flex-basis: 40%;
+  width: 100%;
 }
 
 .contact-left p {
   margin-bottom: 30px;
+  text-align: center;
 }
 
 .contact-left .emailIcon {
@@ -848,7 +874,7 @@ form textarea {
   width: 200px;
   border: 0;
   outline: none;
-  background: #b88b4a;
+  background: #22211f;
   padding: 15px;
   margin: 15px 0;
   color: #fff;
@@ -863,6 +889,7 @@ form textarea {
 
 .message-input {
   width: 100%;
+  height: 20svh;
 }
 
 .btn.btn2 {

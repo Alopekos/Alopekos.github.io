@@ -169,6 +169,16 @@ function openTab(tabname) {
   document.getElementById(tabname).classList.add("active-tab");
 }
 
+//notAssigned alert
+const noLinkElements = document.querySelectorAll(".notAssigned");
+
+noLinkElements.forEach((link) => {
+  link.addEventListener("click", () => {
+    alert("Cette partie du site n'est pas encore finie.");
+    return;
+  });
+});
+
 //submit a message
 const scriptURL =
   "https://script.google.com/macros/s/AKfycbzKYpMO3bSDHcOfXj5lG3j0KYMq7Z9LTMs546wLciODUBIhUeEcOOX-7kch6bGTuxw7bg/exec";
