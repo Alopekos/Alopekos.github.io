@@ -10,7 +10,7 @@
     />
     <title>Rémi Legrand</title>
     <link rel="stylesheet" href="/Styles/stylesheet.css" />
-    <link rel="icon" type="image" href="Images/Favicon.png" />
+    <link rel="icon" type="image" href="Images/FaviconPortfolio.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -36,54 +36,39 @@
               <li onclick="navClose()" class="list">
                 <a href="#header">
                   <span class="icon">
-                    <ion-icon class="navIcon" name="home-outline"></ion-icon>
+                    <img src="/Images/FoxIcon.png" class="navIcon" />
                   </span>
-                  <span class="text">Accueil</span>
                 </a>
               </li>
               <hr />
               <li onclick="navClose()" class="list">
                 <a href="#about">
                   <span class="icon">
-                    <ion-icon
-                      class="navIcon"
-                      name="person-circle-outline"
-                    ></ion-icon>
+                    <img src="/Images/ProfileIcon.png" class="navIcon" />
                   </span>
-                  <span class="text">Profil</span>
                 </a>
               </li>
               <hr />
               <li onclick="navClose()" class="list">
                 <a href="#services">
                   <span class="icon">
-                    <ion-icon
-                      class="navIcon"
-                      name="code-slash-outline"
-                    ></ion-icon>
+                    <img src="/Images/CodeIcon.png" class="navIcon" />
                   </span>
-                  <span class="text">Services</span>
                 </a>
               </li>
               <hr />
               <li onclick="navClose()" class="list">
                 <a href="#portfolio">
                   <span class="icon">
-                    <ion-icon class="navIcon" name="images-outline"></ion-icon>
-                  </span>
-                  <span class="text">Portfolio</span>
+                   <img src="/Images/ImageIcon.png" class="navIcon" />
                 </a>
               </li>
               <hr />
               <li onclick="navClose()" class="list">
                 <a href="#contact">
                   <span class="icon">
-                    <ion-icon
-                      class="navIcon"
-                      name="chatbubble-outline"
-                    ></ion-icon>
+                    <img src="/Images/MessageIcon.png" class="navIcon" />
                   </span>
-                  <span class="text">Contact</span>
                 </a>
               </li>
               <div class="indicator"></div>
@@ -91,7 +76,7 @@
             <div class="resume">
               <button class="resumeBtn">
                 <span><img src="/Images/CV-icon.png" class="cv-icon" /></span>
-                <span class="text">C.V.</span>
+                <span class="text">C.V</span>
               </button>
             </div>
             <div class="openmenu">
@@ -168,13 +153,14 @@
         <div class="bar">
           <ul>
             <li>
-              <ion-icon class="socialIcon" name="logo-linkedin"></ion-icon>
+              <a href="https://www.linkedin.com/in/r%C3%A9mi-legrand-a7385a70/" target="_blank">
+                <ion-icon class="socialIcon" name="logo-linkedin"></ion-icon>
+              </a>
             </li>
             <li>
-              <ion-icon class="socialIcon" name="logo-twitter"></ion-icon>
-            </li>
-            <li>
-              <ion-icon class="socialIcon" name="logo-instagram"></ion-icon>
+              <a href="https://twitter.com/Remi_legrd" target="_blank">
+                <ion-icon class="socialIcon" name="logo-twitter"></ion-icon>
+              </a>
             </li>
             <li>
               <a href="https://github.com/Alopekos" target="_blank">
@@ -214,13 +200,13 @@
 
     <div id="about">
       <div class="container">
+        <h1 class="sub-title"><img src="/Images/ProfileIcon.png" class="page-icon" />Présentation</h1>
         <div class="row">
-          <div class="about-col-1">
-            <img src="Images/Profile-PicturePxl.png" />
-            <img src="Images/Profile-Picture.jpg" />
+          <div class="about-col-1 center">
+              <img src="Images/Profile-PicturePxl.png" />
+              <img src="Images/Profile-Picture.jpg" />
           </div>
           <div class="about-col-2">
-            <h1 class="sub-title">Présentation</h1>
             <p>
               Bonjour, je m'appelle Rémi Legrand. <br />
               Je suis un aspirant développeur web front-end et designer UX/UI.
@@ -297,7 +283,7 @@
 
     <div id="services">
       <div class="container">
-        <h1 class="sub-title">Mes Services</h1>
+        <h1 class="sub-title"><img src="/Images/CodeIcon.png" class="page-icon" />Mes Services</h1>
         <div class="services-list">
           <div>
             <h2>Web Dev</h2>
@@ -322,7 +308,7 @@
 
     <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title">Mes Projets</h1>
+        <h1 class="sub-title"><img src="/Images/ImageIcon.png" class="page-icon" />Mes Projets</h1>
         <div class="work-list">
           <div class="work">
             <img src="Images/NoImage.jpg" />
@@ -363,9 +349,10 @@
 
     <div id="contact">
       <div class="container">
+        <h1 class="sub-title"><img src="/Images/MessageIcon.png" class="page-icon" />Contact</h1>
         <div class="row">
           <div class="contact-left">
-            <h1 class="sub-title">Me Contacter</h1>
+
             <p></p>
             <p>
               remi_legrand@icloud.com<a

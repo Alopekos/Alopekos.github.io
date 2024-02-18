@@ -1,4 +1,11 @@
 //Close NavBar
+
+window.addEventListener("load", () => {
+  setTimeout(() => {
+    navBar.style.transform = "translateX(0%)";
+  }, 2000);
+});
+
 function navClose() {
   setTimeout(() => {
     navBar.style.transform = "translateX(-120%)";
@@ -8,6 +15,12 @@ function navClose() {
 function navCloseInstant() {
   navBar.style.transform = "translateX(-120%)";
 }
+
+window.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    navCloseInstant();
+  }
+});
 //background img
 
 const setBackground = () => {
@@ -99,9 +112,9 @@ let prevScrollPos = window.scrollY;
 window.addEventListener("scroll", () => {
   let currScrollPos = window.scrollY;
 
-  if (currScrollPos < prevScrollPos) {
+  if (currScrollPos > prevScrollPos) {
     navBar.style.transform = "translateX(-120%)";
-  } else if (prevScrollPos < currScrollPos) {
+  } else if (prevScrollPos > currScrollPos) {
     navBar.style.transform = "translateX(0)";
   }
 

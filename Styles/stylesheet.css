@@ -33,7 +33,7 @@ body {
 }
 
 .container {
-  padding: 20px 10%;
+  padding: 0 10%;
 }
 
 .navbar {
@@ -41,8 +41,8 @@ body {
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: center;
-  justify-content: center;
-  padding: 1%;
+  justify-content: right;
+  padding-right: 1.5svh;
   padding-left: 6svh;
   width: 24svh;
   height: 102%;
@@ -50,11 +50,10 @@ body {
   background-repeat: repeat;
   background-size: 30svh;
   position: fixed;
-  left: -4svh;
+  left: -8svh;
   top: -1%;
   bottom: -1%;
   transform: translateX(-120%);
-  border-radius: 5svh;
   z-index: 5;
   border: 1svh solid #241407;
   box-shadow: 10px 0 20px rgba(0, 0, 0, 0.3);
@@ -83,7 +82,7 @@ body {
   background-size: contain;
   box-shadow: inset 0px 0px 0px 4px #9a672b;
   border-radius: 50%;
-  border: 0.5svh solid #613514;
+  border: 0.7svh solid #613514;
   transition: 0.5s;
 }
 
@@ -91,11 +90,11 @@ nav ul {
   display: grid;
   justify-content: center;
   justify-items: center;
-  width: 14svh;
-  height: 60svh;
+  width: 12svh;
+  height: 50svh;
   padding-top: 1svh;
-  padding-bottom: 1svh;
-  border: #613514 solid 0.5svh;
+  padding-bottom: 1.5svh;
+  border: #613514 solid 0.8svh;
   border-radius: 5svh;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
@@ -109,7 +108,6 @@ nav ul li {
   z-index: 1;
   gap: 0;
   padding-bottom: 2svh;
-  padding-top: 2svh;
 }
 
 nav ul li a {
@@ -120,81 +118,59 @@ nav ul li a {
 
 .navIcon {
   color: #382b1e;
-  font-size: 5svh;
-  height: 5svh;
+  height: 7svh;
 }
 
 nav ul li a .icon {
-  position: relative;
-  display: block;
   font-size: 5svh;
   height: 5svh;
-  text-align: center;
   transition: 0.5s;
 }
 
 nav ul li.active a .navIcon {
-  transform: translateY(-1svh);
-  transition: 0.5s;
-  color: #fff;
-}
-
-nav ul li a .text {
-  position: absolute;
-  color: #fff;
-  font-size: 2.5svh;
-  font-weight: 300;
-  letter-spacing: -0.05em;
+  transform: translateY(-0.7svh);
+  filter: brightness(5);
   transition: 0.7s;
-  opacity: 0;
-  transform: translateX(0px);
-}
-
-nav ul li.active a .text {
-  opacity: 1;
-  transform: translateY(3.5svh);
-  color: #fff;
 }
 
 hr {
   height: 1px;
   color: #613514;
-  margin-top: 1svh;
   padding: 0;
-  width: 13svh;
+  margin-top: 1svh;
+  border: solid 1.5px #613514;
+  width: 10.7svh;
   z-index: 3;
 }
 
 .indicator {
   display: none;
   position: absolute;
-  margin-top: 1svh;
-  margin-left: 0;
-  width: 12svh;
-  height: 7svh;
+  width: 10.5svh;
+  height: 9svh;
   background: #9a672b;
-  border-radius: 2svh;
+  border-radius: 3.2svh;
   transition: 0.5s;
 }
 
 nav ul li:nth-child(1).active ~ .indicator {
-  transform: translateY(calc(10svh * 0));
-}
-
-nav ul li:nth-child(2).active ~ .indicator {
-  transform: translateY(calc(11.5svh * 1));
+  transform: translateY(calc(11svh * 0));
 }
 
 nav ul li:nth-child(3).active ~ .indicator {
-  transform: translateY(calc(11.5svh * 2));
-}
-
-nav ul li:nth-child(4).active ~ .indicator {
-  transform: translateY(calc(11.5svh * 3));
+  transform: translateY(calc(9.1svh * 1));
 }
 
 nav ul li:nth-child(5).active ~ .indicator {
-  transform: translateY(calc(11.5svh * 4));
+  transform: translateY(calc(9.35svh * 2));
+}
+
+nav ul li:nth-child(7).active ~ .indicator {
+  transform: translateY(calc(9.5svh * 3));
+}
+
+nav ul li:nth-child(9).active ~ .indicator {
+  transform: translateY(calc(9.45svh * 4));
 }
 
 .resume {
@@ -207,15 +183,16 @@ nav ul li:nth-child(5).active ~ .indicator {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 1svh;
   color: #fff;
-  width: 7svh;
-  height: 7svh;
+  width: 6svh;
+  height: 6svh;
   border-radius: 50%;
-  border: 0.5svh solid #613514;
+  border: 0.7svh solid #613514;
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
-  cursor: wait;
+  cursor: pointer;
 }
 
 .resume button .text {
@@ -234,7 +211,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .resume img {
-  height: 30px;
+  height: 3svh;
 }
 
 .resume button:hover img {
@@ -357,7 +334,7 @@ nav ul li:nth-child(5).active ~ .indicator {
   content: "";
   display: block;
   width: 2px;
-  height: 40svh;
+  height: 50svh;
   margin: 0 auto;
   background-color: #fff;
 }
@@ -379,6 +356,13 @@ nav ul li:nth-child(5).active ~ .indicator {
     opacity: 0;
     transform: rotateY(90deg);
   }
+}
+
+.page-icon {
+  height: 100px;
+  vertical-align: middle;
+  margin-right: 15px;
+  filter: brightness(2);
 }
 
 /* ----------- Presentation/minigame ------------ */
@@ -460,19 +444,19 @@ nav ul li:nth-child(5).active ~ .indicator {
   }
   21%,
   40% {
-    content: "un développeur web";
+    content: "développeur web";
   }
   41%,
   60% {
-    content: "un pixel artist";
+    content: "pixel artist";
   }
   61%,
   80% {
-    content: "un web designer";
+    content: "web designer";
   }
   81%,
   100% {
-    content: "un amateur de renards";
+    content: "amateur de renards";
   }
 }
 
@@ -516,12 +500,12 @@ nav ul li:nth-child(5).active ~ .indicator {
 .wasdAnim {
   position: absolute;
   left: 47vw;
-  top: 20svh;
+  top: 18svh;
 }
 
 .wasdAnim img {
   width: 10svh;
-  height: 10svh;
+  height: 13svh;
 }
 
 .container-game {
@@ -542,18 +526,26 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 /* ------------- about -------------- */
 
+h1 {
+  margin-bottom: 6svh;
+}
+
 #about {
-  padding: 10svh 0;
-  margin-bottom: 60svh;
+  margin: auto 0 60svh 0;
   position: relative;
   height: 100%;
   width: 100%;
+  min-width: 0;
 }
 
 .row {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  margin-left: 0;
+  margin-right: 0;
+  width: 100%;
+  gap: 2svh;
 }
 
 .about-col-1 {
@@ -563,9 +555,10 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .about-col-1 img {
-  width: 100%;
+  width: 80%;
   position: absolute;
   border-radius: 15px;
+  margin-top: 2svh;
   transition: 1s;
 }
 
@@ -587,6 +580,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 .about-col-2 {
   flex-basis: 60%;
+  width: 60%;
 }
 
 .about-col-2 p {
@@ -657,7 +651,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 /* ------------- services -------------- */
 
 #services {
-  padding-top: 20svh;
+  padding-top: 30svh;
   margin-bottom: 10svh;
   padding-bottom: 60svh;
   background-image: url("/Images/ServicesBckgr.png");
@@ -812,12 +806,12 @@ nav ul li:nth-child(5).active ~ .indicator {
   background-image: url("/Images/ContactBckgr.png");
   background-repeat: no-repeat;
   background-size: cover;
-  padding-top: 15svh;
-  padding-bottom: 30svh;
+  padding-top: 30svh;
+  padding-bottom: 15svh;
 }
 
 .contact-left {
-  flex-basis: 35%;
+  flex-basis: 40%;
 }
 
 .contact-left p {
@@ -825,12 +819,9 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .contact-left .emailIcon {
-  position: absolute;
-  text-align: center;
-  width: 4svh;
-  height: 4svh;
-  left: 55svh;
-  transition: 0.5s;
+  vertical-align: middle;
+  font-size: 4svh;
+  margin-left: 20px;
 }
 
 .contact-left a:hover .emailIcon {
@@ -841,7 +832,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 }
 
 .contact-right {
-  flex-basis: 60%;
+  flex-basis: 100%;
 }
 
 .contact-left p {
@@ -854,7 +845,7 @@ nav ul li:nth-child(5).active ~ .indicator {
 
 form input,
 form textarea {
-  width: 50%;
+  width: 200px;
   border: 0;
   outline: none;
   background: #b88b4a;
@@ -864,6 +855,10 @@ form textarea {
   font-size: 18px;
   font-family: "Inconsolata", sans-serif;
   border-radius: 6px;
+}
+
+form textarea {
+  width: 100%;
 }
 
 .message-input {
@@ -948,6 +943,7 @@ nav .menuicon {
     justify-content: right;
     grid-gap: 0svh;
     border: 0.8svh solid #241407;
+    border-radius: 2svh;
     top: 30svh;
     left: -10.7svh;
     padding-top: 1svh;
@@ -990,7 +986,16 @@ nav .menuicon {
   }
 
   .presentation {
-    margin-bottom: 1000px;
+    margin-bottom: 700px;
+  }
+
+  h1 {
+    width: 100%;
+    margin-bottom: 120px;
+    text-align: center;
+  }
+  .center {
+    margin: auto;
   }
 
   .searchBar {
@@ -1035,7 +1040,7 @@ nav .menuicon {
   }
 
   .about-col-1 {
-    margin-bottom: 250px;
+    margin-bottom: 120px;
     display: flex;
     justify-content: center;
     justify-items: center;
@@ -1048,8 +1053,8 @@ nav .menuicon {
   }
 
   .about-col-1 img {
-    width: 300px;
-    height: 300px;
+    width: 200px;
+    height: 200px;
   }
 
   .about-col-2 {
@@ -1060,11 +1065,6 @@ nav .menuicon {
   .tab-links {
     font-size: 16px;
     margin-right: 20px;
-  }
-
-  .contact-left,
-  .contact-right {
-    flex-basis: 100%;
   }
 
   .copyright p {
