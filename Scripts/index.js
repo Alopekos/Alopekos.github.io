@@ -22,9 +22,8 @@ window.addEventListener("keydown", (e) => {
   }
 });
 //background img
-
+const foreground = document.getElementById("foreground-img");
 const setBackground = () => {
-  const foreground = document.getElementById("foreground-img");
   const currentTime = new Date();
   const month = currentTime.getMonth() + 1;
   let totalMonth = month;
@@ -153,6 +152,37 @@ function closemenu() {
   sidemenu.style.right = "-300px";
   document.querySelector("html").style.overflowY = "auto";
 }
+
+//change season buttons
+
+const springBtn = document.querySelector(".spring-btn");
+const summerBtn = document.querySelector(".summer-btn");
+const fallBtn = document.querySelector(".fall-btn");
+const winterBtn = document.querySelector(".winter-btn");
+
+springBtn.addEventListener("click", () => {
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Spring.png')";
+  foreground.src = "/Images/Foreground-Spring.png";
+});
+
+summerBtn.addEventListener("click", () => {
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Summer.png')";
+  foreground.src = "/Images/Foreground-Summer.png";
+});
+
+fallBtn.addEventListener("click", () => {
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Fall.png')";
+  foreground.src = "/Images/Foreground-Fall.png";
+});
+
+winterBtn.addEventListener("click", () => {
+  document.body.style.backgroundImage =
+    "url('/Images/BackgroundPixelArt-Winter.png')";
+  foreground.src = "/Images/Foreground-Winter.png";
+});
 
 //about me interactions
 const tablinks = document.getElementsByClassName("tab-links");

@@ -86,7 +86,7 @@ body {
   transition: 0.5s;
 }
 
-nav ul {
+#menu {
   display: grid;
   justify-content: center;
   justify-items: center;
@@ -101,7 +101,7 @@ nav ul {
   box-shadow: inset 0px 0px 0px 8px #9a672b;
 }
 
-nav ul li {
+nav ul .list {
   position: relative;
   list-style: none;
   display: flex;
@@ -183,7 +183,6 @@ nav ul li:nth-child(9).active ~ .indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 1svh;
   color: #fff;
   width: 6svh;
   height: 6svh;
@@ -356,6 +355,105 @@ nav ul li:nth-child(9).active ~ .indicator {
     opacity: 0;
     transform: rotateY(90deg);
   }
+}
+
+.choose-season {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.choose-season .text {
+  position: absolute;
+  color: #ffffff;
+  font-size: 2svh;
+  letter-spacing: 0.05em;
+  opacity: 0;
+  transition: 0.5s;
+  transform: translateY(0px);
+}
+
+.choose-season img {
+  height: 3svh;
+}
+
+.choose-season:hover .seasons {
+  pointer-events: all;
+}
+
+.choose-season:hover .season-token:nth-child(1) {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.5s;
+}
+
+.choose-season:hover .season-token:nth-child(2) {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 0.8s;
+}
+.choose-season:hover .season-token:nth-child(3) {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1.2s;
+}
+.choose-season:hover .season-token:nth-child(4) {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: 1.4s;
+}
+
+.seasons {
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.seasonBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  width: 6svh;
+  height: 6svh;
+  border-radius: 50%;
+  border: 0.7svh solid #613514;
+  background-image: url(/Images/NavLiBackground.png);
+  background-size: contain;
+  box-shadow: inset 0px 0px 0px 7px #9a672b;
+  cursor: pointer;
+}
+
+.seasonsList {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  list-style: none;
+  justify-items: center;
+  align-items: center;
+  position: absolute;
+  gap: 2svh;
+  padding-left: 2svh;
+}
+
+.season-token {
+  height: 100%;
+  transform: translateY(20px);
+  transition: 0.5s;
+  opacity: 0;
+}
+
+.season-token:hover button {
+  transform: translateY(-10px);
+  transition: 0.5s;
+}
+
+.season-token button {
+  border: none;
+  background-color: red;
+  border-radius: 50%;
+  height: 6svh;
+  width: 6svh;
+  transition: 0.5s;
 }
 
 .page-icon {
@@ -980,7 +1078,11 @@ nav .menuicon {
     transition: 1s;
   }
 
-  nav ul {
+  #menu {
+    display: none;
+  }
+
+  nav .choose-season {
     display: none;
   }
 
