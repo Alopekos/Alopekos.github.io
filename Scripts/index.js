@@ -161,27 +161,39 @@ const fallBtn = document.querySelector(".fall-btn");
 const winterBtn = document.querySelector(".winter-btn");
 
 springBtn.addEventListener("click", () => {
+  foreground.src = "";
   document.body.style.backgroundImage =
     "url('/Images/BackgroundPixelArt-Spring.png')";
-  foreground.src = "/Images/Foreground-Spring.png";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Spring.png";
+  }, 500);
 });
 
 summerBtn.addEventListener("click", () => {
+  foreground.src = "";
   document.body.style.backgroundImage =
     "url('/Images/BackgroundPixelArt-Summer.png')";
-  foreground.src = "/Images/Foreground-Summer.png";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Summer.png";
+  }, 500);
 });
 
 fallBtn.addEventListener("click", () => {
+  foreground.src = "";
   document.body.style.backgroundImage =
     "url('/Images/BackgroundPixelArt-Fall.png')";
-  foreground.src = "/Images/Foreground-Fall.png";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Fall.png";
+  }, 500);
 });
 
 winterBtn.addEventListener("click", () => {
+  foreground.src = "";
   document.body.style.backgroundImage =
     "url('/Images/BackgroundPixelArt-Winter.png')";
-  foreground.src = "/Images/Foreground-Winter.png";
+  setTimeout(() => {
+    foreground.src = "/Images/Foreground-Winter.png";
+  }, 500);
 });
 
 //about me interactions
