@@ -36,6 +36,10 @@ body {
   padding: 0 10%;
 }
 
+#header {
+  padding-top: 1svh;
+}
+
 .navbar {
   display: grid;
   flex-direction: column;
@@ -191,7 +195,7 @@ nav ul li:nth-child(9).active ~ .indicator {
   background-image: url(/Images/NavLiBackground.png);
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
-  cursor: not-allowed;
+  cursor: pointer;
 }
 
 .resume button .text {
@@ -361,6 +365,15 @@ nav ul li:nth-child(9).active ~ .indicator {
   display: flex;
   align-items: center;
   justify-content: center;
+  justify-items: center;
+}
+
+.l-button {
+  height: 3svh;
+  width: 3svh;
+  background-color: #c3a05f;
+  border-radius: 50%;
+  transition: 0.5s;
 }
 
 .choose-season .text {
@@ -373,8 +386,9 @@ nav ul li:nth-child(9).active ~ .indicator {
   transform: translateY(0px);
 }
 
-.choose-season img {
-  height: 3svh;
+.choose-season:hover .l-button {
+  transform: rotateZ(90deg);
+  background-color: #613514;
 }
 
 .choose-season:hover .seasons {
@@ -438,7 +452,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 .season-token {
   height: 100%;
   transform: translateY(20px);
-  transition: 0.5s;
+  transition: 0.3s;
   opacity: 0;
 }
 
@@ -448,12 +462,17 @@ nav ul li:nth-child(9).active ~ .indicator {
 }
 
 .season-token button {
-  border: none;
-  background-color: red;
+  border: 0.7svh solid #241407;
+  background-color: #fff;
   border-radius: 50%;
   height: 6svh;
   width: 6svh;
   transition: 0.5s;
+}
+
+.seasons li span img {
+  width: 80%;
+  height: 80%;
 }
 
 .page-icon {
@@ -466,8 +485,8 @@ nav ul li:nth-child(9).active ~ .indicator {
 /* ----------- Presentation/minigame ------------ */
 .foregroundImg img {
   position: absolute;
-  width: 104.1vw;
-  top: -0.1vw;
+  width: 104vw;
+  top: 0;
 }
 
 .presentation {
@@ -630,7 +649,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 #canvas {
   position: absolute;
-  left: 10.5vw;
+  left: 10.3vw;
   top: 12.1vw;
   width: 70vw;
   height: 32.9vw;
