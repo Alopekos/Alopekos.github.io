@@ -23,6 +23,9 @@
     <main>
       <div id="header">
         <div class="container">
+
+          <!-- ------ Navbar ------ -->
+
           <nav class="navbar">
             <div class="cross-container">
               <img
@@ -76,7 +79,6 @@
             <div class="choose-season">
               <button class="seasonBtn">
                 <div class="l-button"></div>
-                <span class="text">Saisons</span>
               </button>
               <div class="seasons">
                 <ul class="seasonsList">
@@ -114,7 +116,7 @@
             <div class="resume">
               <button class="resumeBtn">
                 <span><img src="/Images/CV-icon.png" class="cv-icon" /></span>
-                <span class="text">C.V</span>
+                <span id="resume-txt" class="text">C.V</span>
               </button>
             </div>
             <div class="openmenu">
@@ -126,6 +128,16 @@
               />
             </div>
           </nav>
+          <!-- ------ Language toggle button ------ -->
+
+          <div id="toggle">
+            <i class="toggle-indicator"></i>
+            <div class="language-container">
+              <span id="english">EN </span><span id="french">FR</span>
+            </div>
+          </div>
+
+          <!-- ------ Small devices navbar ------ -->
 
           <ul id="sidemenu">
             <li class="sidelist">
@@ -133,7 +145,7 @@
                 <span class="icon">
                   <ion-icon class="navIcon" name="home-outline"></ion-icon>
                 </span>
-                Accueil</a
+                <p id="home-txt">Accueil</p></a
               >
             </li>
             <li class="sidelist">
@@ -144,7 +156,7 @@
                     name="person-circle-outline"
                   ></ion-icon>
                 </span>
-                Profil</a
+                <p id="profile-txt">Profil</p></a
               >
             </li>
             <li class="sidelist">
@@ -155,7 +167,7 @@
                     name="code-slash-outline"
                   ></ion-icon>
                 </span>
-                Services</a
+                <p>Services</p></a
               >
             </li>
             <li class="sidelist">
@@ -163,7 +175,7 @@
                 <span class="icon">
                   <ion-icon class="navIcon" name="images-outline"></ion-icon>
                 </span>
-                Portfolio</a
+                <p>Portfolio</p></a
               >
             </li>
             <li class="sidelist">
@@ -174,11 +186,11 @@
                     name="chatbubble-outline"
                   ></ion-icon>
                 </span>
-                Contact</a
+                <p>Contact</p></a
               >
             </li>
             <li class="sidelistResume">
-              <a href="#" onclick="closemenu()">C.V.</a>
+              <a id="resume-small-txt" href="#" onclick="closemenu()">C.V</a>
             </li>
             <img
               class="closeicon"
@@ -188,6 +200,9 @@
             />
           </ul>
         </div>
+
+        <!-- ------ Socials ------ -->
+
         <div class="bar">
           <ul>
             <li>
@@ -221,7 +236,7 @@
       </div>
       <div class="presentation">
         <div class="searchBar">
-          <p>- Bonjour, je suis -</p>
+          <p id="hello-txt">- Bonjour, je suis -</p>
         </div>
         <div class="animated-text">
           <span></span>
@@ -232,41 +247,46 @@
       </div>
       <div class="wasdAnim">
         <img src="Images/wasd.gif" alt="wasd-gif" />
-        <p>Appuyez sur les touches du clavier.</p>
+        <p id="wasd-txt">Appuyez sur les touches du clavier.</p>
       </div>
     </main>
     <!-- ------------ about ------------ -->
 
     <div id="about">
       <div class="container">
-        <h1 class="sub-title"><img src="/Images/ProfileIcon.png" class="page-icon" />Présentation</h1>
+        <div class="title-container">
+          <img src="/Images/ProfileIcon.png" class="page-icon" />
+          <h1 id="presentation-title" class="sub-title">Présentation</h1>
+        </div>
         <div class="row">
           <div class="about-col-1 center">
               <img src="Images/Profile-PicturePxl.png" />
               <img src="Images/Profile-Picture.jpg" />
           </div>
           <div class="about-col-2">
-            <p>
-              Bonjour, je m'appelle Rémi Legrand. <br />
-              Je suis un aspirant développeur web front-end et designer UX/UI.
-              En tant que programmeur, ma passion est de créer des interfaces
-              utilisateur originales et réactives.
-            </p>
-            <p>
-              Passionné de pixel art et de programmation, je suis toujours
-              curieux d'en apprendre plus sur les nouvelles technologies et le
-              codage innovant.
-            </p>
-            <p>Entrons en contact !</p>
+            <div id="about-col-1-txt">
+              <p>
+                Bonjour, je m'appelle Rémi Legrand. <br />
+                Je suis un aspirant développeur web front-end et designer UX/UI.
+                En tant que programmeur, ma passion est de créer des interfaces
+                utilisateur originales et réactives.
+              </p>
+              <p>
+                Passionné de pixel art et de programmation, je suis toujours
+                curieux d'en apprendre plus sur les nouvelles technologies et le
+                codage innovant.
+              </p>
+              <p>Entrons en contact !</p>
+            </div>
 
             <div class="tab-titles">
-              <h1 class="tab-links active-link" onclick="openTab('skills')">
+              <h1 id="skills-txt" class="tab-links active-link" onclick="openTab('skills')">
                 Compétences
               </h1>
-              <h1 class="tab-links" onclick="openTab('experience')">
+              <h1 id="experience-txt" class="tab-links" onclick="openTab('experience')">
                 Expérience
               </h1>
-              <h1 class="tab-links" onclick="openTab('education')">
+              <h1 id="education-txt" class="tab-links" onclick="openTab('education')">
                 Éducation
               </h1>
             </div>
@@ -278,7 +298,7 @@
                 </li>
                 <li>
                   <span>Web developpement</span><br />Développement
-                  d'applications web.
+                  d'applications web
                 </li>
                 <li>
                   <span>Logiciels et technologies</span><br />HTML, CSS,
@@ -297,7 +317,7 @@
                 </li>
                 <li>
                   <span>2014</span><br />Stage d'observation en conception web
-                  design/web development à "La Haute Société", Grenoble.
+                  design/web development à "La Haute Société", Grenoble
                 </li>
               </ul>
             </div>
@@ -305,11 +325,11 @@
               <ul>
                 <li>
                   <span>2022</span><br />Master en littérature anglaise (LLCER)
-                  à l'Université Grenoble Alpes.
+                  à l'Université Grenoble Alpes
                 </li>
                 <li>
                   <span>2020</span><br />Licence en Langues Etrangères
-                  Appliquées (LEA) à l'Université Grenoble Alpes.
+                  Appliquées (LEA) à l'Université Grenoble Alpes
                 </li>
               </ul>
             </div>
@@ -322,11 +342,14 @@
 
     <div id="services">
       <div class="container">
-        <h1 class="sub-title"><img src="/Images/CodeIcon.png" class="page-icon" />Mes Services</h1>
-        <div class="services-list">
+        <div class="title-container">
+          <img src="/Images/CodeIcon.png" class="page-icon" />
+          <h1 id="services-txt" class="sub-title">Mes Services</h1>
+        </div>
+        <div id="service-list" class="services-list">
           <div>
             <h2>Web Dev</h2>
-            <p>Construction de sites internets. HTML, CSS, Javascript, Git. Frameworks : Angular (en cours d'apprentissage).</p>
+            <p>Construction de sites internets. HTML, CSS, Javascript, Git. Frameworks :(en cours d'apprentissage).</p>
             <a class="notAssigned">En savoir plus</a>
           </div>
           <div>
@@ -347,13 +370,16 @@
 
     <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title"><img src="/Images/ImageIcon.png" class="page-icon" />Mes Projets</h1>
+        <div class="title-container">
+          <img src="/Images/ImageIcon.png" class="page-icon" />
+          <h1 id="project-txt" class="sub-title">Mes Projets</h1>
+        </div>
         <div class="work-list">
           <div class="work">
             <img src="Images/Projet1-Portefolio.png" />
             <div class="layer">
               <h3>Portefolio</h3>
-              <p>Mon premier projet. Un portefolio personnel changeant avec les saisons.<br/> Répositoire GitHub:</p>
+              <p id="portefolio-projet-txt">Mon premier projet. Un portefolio personnel changeant avec les saisons.<br/> Répositoire GitHub:</p>
               <a href="https://github.com/Alopekos/Alopekos.github.io" target="_blank"><ion-icon class="projectIcon" name="log-in-outline"></ion-icon
               ></a>
             </div>
@@ -379,7 +405,7 @@
             </div>
           </div>
         </div>
-        <a class="btn notAssigned">Voir plus</a>
+        <a id="see-more-txt" class="btn notAssigned">Voir plus</a>
       </div>
     </div>
 
@@ -387,14 +413,17 @@
 
     <div id="contact">
       <div class="container">
-        <h1 class="sub-title"><img src="/Images/MessageIcon.png" class="page-icon" />Contact</h1>
+        <div class="title-container">
+          <img src="/Images/MessageIcon.png" class="page-icon" />
+          <h1 class="sub-title">Contact</h1>
+        </div>
         <div class="row">
           <div class="contact-right">
             <form name="submit-to-google-sheet">
               <input
                 type="text"
                 name="Name"
-                placeholder="Nom."
+                placeholder="Alias."
                 required
                 onclick="navClose()"
               />
@@ -412,8 +441,8 @@
             <span id="msg"></span>
           </div>
                     <div class="contact-left">
-            <p>
-              Ou bien envoyez moi un email :&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com<a
+            <p id ="email-txt">
+              Ou bien envoyez moi un email:&nbsp;&nbsp;&nbsp;remi_legrand@icloud.com<a
                 href="mailto:remi_legrand@icloud.com"
                 target="_blank"
                 ><ion-icon class="emailIcon" name="mail"></ion-icon
@@ -437,6 +466,7 @@
     <script src="Scripts/data/collisions.js"></script>
     <script src="Scripts/Classes/CollisionBlock.js"></script>
     <script src="Scripts/game.js"></script>
+    <script src="Scripts/language.js"></script>
     <script
       type="module"
       src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"

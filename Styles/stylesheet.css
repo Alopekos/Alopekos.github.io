@@ -5,6 +5,14 @@
 #131f2f
 #633e19
 */
+:root {
+  --name:"Rémi !";
+  --webdev:"développeur web";
+  --pxlartist:"pixel artist";
+  --webdesign:"web designer";
+  --foxenjoyer:"amateur de renards";
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -34,6 +42,13 @@ body {
 
 .container {
   padding: 0 10%;
+}
+
+.title-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 4svh;
 }
 
 #header {
@@ -227,6 +242,70 @@ nav ul li:nth-child(9).active ~ .indicator {
   display: inline-block;
 }
 
+#toggle {
+  position: absolute;
+  width: 10svh;
+  height: 5svh;
+  border-radius: 10svh;
+  vertical-align: center;
+  background: linear-gradient(#fff, #b4aaaa);
+  right: 4svw;
+  top: 3svh;
+  z-index: 5;
+  transition: 0.5s;
+  box-shadow: inset 0 0.5svh 1px rgba(0, 0, 0, 0.2),
+    inset 0 2px 1px rgba(88, 88, 88, 0.2),
+    inset 0 -0.5svh 1px rgba(0, 0, 0, 0.3);
+}
+
+#toggle .toggle-indicator {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5svh;
+  height: 5svh;
+  opacity: 0.8;
+  background-image: url(/Images/French-flag.png);
+  background-size: cover;
+  border-radius: 50%;
+  border: 2px solid #12233a;
+  transform: scale(0.9);
+  transition: 0.5s;
+  z-index: 6;
+}
+
+#toggle.active .toggle-indicator {
+  left: 5svh;
+  transition: 0.5s;
+  background-image: url(/Images/UK-flag.png);
+  background-size: contain;
+}
+
+#toggle .language-container {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+#toggle .language-container span {
+  color: #1c235a;
+  font-size: 3svh;
+}
+
+#french {
+  opacity: 1;
+  position: absolute;
+  transition: 0.5s;
+  right: 8px;
+}
+
+#english {
+  opacity: 0;
+  position: absolute;
+  transition: 0.5s;
+  left: 8px;
+}
+
 #sidemenu {
   display: grid;
   background: #131f2f;
@@ -302,7 +381,6 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .bar {
   position: fixed;
-  display: space-between;
   width: 10svh;
   top: 0px;
   right: 0px;
@@ -477,7 +555,6 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 .page-icon {
   height: 100px;
-  vertical-align: middle;
   margin-right: 15px;
   filter: brightness(2);
 }
@@ -557,23 +634,23 @@ nav ul li:nth-child(9).active ~ .indicator {
 @keyframes words {
   0%,
   20% {
-    content: "Rémi !";
+    content: var(--name);
   }
   21%,
   40% {
-    content: "développeur web";
+    content: var(--webdev);
   }
   41%,
   60% {
-    content: "pixel artist";
+    content: var(--pxlartist);
   }
   61%,
   80% {
-    content: "web designer";
+    content: var(--webdesign);
   }
   81%,
   100% {
-    content: "amateur de renards";
+    content: var(--foxenjoyer);
   }
 }
 
@@ -662,6 +739,7 @@ nav ul li:nth-child(9).active ~ .indicator {
 
 h1 {
   margin-bottom: 6svh;
+  width: 50%;
 }
 
 #about {
@@ -726,6 +804,7 @@ h1 {
 
 .sub-title {
   font-size: 50px;
+  margin: auto 0;
   font-family: "Pixelify Sans", sans-serif;
   color: #ddca7d;
   letter-spacing: 0.1em;
