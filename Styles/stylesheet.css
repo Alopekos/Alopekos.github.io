@@ -258,6 +258,10 @@ nav ul li:nth-child(9).active ~ .indicator {
     inset 0 -0.5svh 1px rgba(0, 0, 0, 0.3);
 }
 
+#toggle:hover {
+  cursor: pointer;
+}
+
 #toggle .toggle-indicator {
   position: absolute;
   top: 0;
@@ -449,24 +453,14 @@ nav ul li:nth-child(9).active ~ .indicator {
 .l-button {
   height: 3svh;
   width: 3svh;
-  background-color: #c3a05f;
+  background-color: #382b1e;
   border-radius: 50%;
   transition: 0.5s;
 }
 
-.choose-season .text {
-  position: absolute;
-  color: #ffffff;
-  font-size: 2svh;
-  letter-spacing: 0.05em;
-  opacity: 0;
-  transition: 0.5s;
-  transform: translateY(0px);
-}
-
 .choose-season:hover .l-button {
   transform: rotateZ(90deg);
-  background-color: #613514;
+  background-color: #c3a05f;
 }
 
 .choose-season:hover .seasons {
@@ -482,17 +476,17 @@ nav ul li:nth-child(9).active ~ .indicator {
 .choose-season:hover .season-token:nth-child(2) {
   opacity: 1;
   transform: translateY(0px);
-  transition: 0.8s;
+  transition: 1s;
 }
 .choose-season:hover .season-token:nth-child(3) {
   opacity: 1;
   transform: translateY(0px);
-  transition: 1.2s;
+  transition: 1.5s;
 }
 .choose-season:hover .season-token:nth-child(4) {
   opacity: 1;
   transform: translateY(0px);
-  transition: 1.4s;
+  transition: 2s;
 }
 
 .seasons {
@@ -505,47 +499,61 @@ nav ul li:nth-child(9).active ~ .indicator {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #fff;
   width: 6svh;
   height: 6svh;
   border-radius: 50%;
-  border: 0.7svh solid #613514;
-  background-image: url(/Images/NavLiBackground.png);
+  border: 0.8svh solid #613514;
   background-size: contain;
   box-shadow: inset 0px 0px 0px 7px #9a672b;
-  cursor: pointer;
 }
 
 .seasonsList {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
   list-style: none;
   justify-items: center;
   align-items: center;
   position: absolute;
-  gap: 2svh;
+  gap: 0.5svh;
   padding-left: 2svh;
+  margin-top: 12svh;
 }
 
 .season-token {
   height: 100%;
-  transform: translateY(20px);
+  transform: translateY(10px);
   transition: 0.3s;
   opacity: 0;
 }
 
 .season-token:hover button {
-  transform: translateY(-10px);
+  transform: translateX(3px);
   transition: 0.5s;
 }
 
 .season-token button {
   border: 0.7svh solid #241407;
-  background-color: #fff;
   border-radius: 50%;
   height: 6svh;
   width: 6svh;
   transition: 0.5s;
+  cursor: pointer;
+}
+
+.winter-btn {
+  background-color: #131f2f;
+}
+
+.spring-btn {
+  background-color: #1d4616;
+}
+
+.summer-btn {
+  background-color: #645700;
+}
+
+.fall-btn {
+  background-color: #7b3500;
 }
 
 .seasons li span img {
@@ -1030,7 +1038,7 @@ h1 {
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: 20svh;
-  padding-bottom: 0;
+  padding-bottom: 5svh;
 }
 
 .contact-left {
@@ -1121,11 +1129,12 @@ form .btn2 {
   width: 100%;
   font-family: "Inconsolata", sans-serif;
   text-align: center;
-  padding: 25px 0;
-  background: #302820;
+  padding: 10px 0;
+  background-color: #090b0f;
   font-weight: 100;
+  font-size: 12px;
   position: absolute;
-  margin-top: 40px;
+  margin-top: 0;
   z-index: 4;
 }
 
@@ -1255,6 +1264,7 @@ nav .menuicon {
 
   .sub-title {
     font-size: 40px;
+    text-align: left;
   }
 
   .wasdAnim {
@@ -1270,6 +1280,7 @@ nav .menuicon {
 
   .about-col-1 {
     margin-bottom: 120px;
+    margin-top: 100px;
     display: flex;
     justify-content: center;
     justify-items: center;
